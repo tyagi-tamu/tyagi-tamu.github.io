@@ -1,463 +1,745 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Aakash Tyagi — Texas A&M University</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    /* ── TOKENS ─────────────────────────────────────────── */
-    :root {
-      --maroon:      #500000;
-      --maroon-light:#7a1c1c;
-      --maroon-pale: #f9f1f1;
-      --cream:       #fdfaf7;
-      --white:       #ffffff;
-      --ink:         #1a1a1a;
-      --ink-mid:     #444444;
-      --ink-soft:    #777777;
-      --rule:        #e8e0d8;
-      --accent:      #c8a96e;
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'DM Sans', sans-serif;
-      --max:          1140px;
-      --gap:          2.5rem;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Aakash Tyagi — Texas A&M University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ── TOKENS ─────────────────────────────────────────── */
+      :root {
+        --maroon: #500000;
+        --maroon-light: #7a1c1c;
+        --maroon-pale: #f9f1f1;
+        --cream: #fdfaf7;
+        --white: #ffffff;
+        --ink: #1a1a1a;
+        --ink-mid: #444444;
+        --ink-soft: #777777;
+        --rule: #e8e0d8;
+        --accent: #c8a96e;
+        --font-display: "Cormorant Garamond", Georgia, serif;
+        --font-body: "DM Sans", sans-serif;
+        --max: 1140px;
+        --gap: 2.5rem;
+      }
 
-    /* ── RESET ──────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      background: var(--cream);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--maroon); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; display: block; }
+      /* ── RESET ──────────────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font-body);
+        background: var(--cream);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--maroon);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
 
-    /* ── NAV ────────────────────────────────────────────── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(253,250,247,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--rule);
-      padding: 0 2rem;
-    }
-    .nav-inner {
-      max-width: var(--max); margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 58px;
-    }
-    .nav-brand {
-      font-family: var(--font-display);
-      font-size: 1.15rem; font-weight: 600;
-      color: var(--maroon); letter-spacing: 0.01em;
-    }
-    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
-    .nav-links a {
-      font-size: 0.78rem; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--ink-mid);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--maroon); text-decoration: none; }
-    .nav-links a.active { color: var(--maroon); border-bottom: 2px solid var(--maroon); padding-bottom: 2px; }
+      /* ── NAV ────────────────────────────────────────────── */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(253, 250, 247, 0.96);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--rule);
+        padding: 0 2rem;
+      }
+      .nav-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 58px;
+      }
+      .nav-brand {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--maroon);
+        letter-spacing: 0.01em;
+      }
+      .nav-links {
+        display: flex;
+        gap: 1.8rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-mid);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--maroon);
+        text-decoration: none;
+      }
+      .nav-links a.active {
+        color: var(--maroon);
+        border-bottom: 2px solid var(--maroon);
+        padding-bottom: 2px;
+      }
 
-    /* ── HASH ROUTING ───────────────────────────────────── */
-    .section { display: none; margin-bottom: 4rem; }
-    .section.active { display: block; }
+      /* ── HASH ROUTING ───────────────────────────────────── */
+      .section {
+        display: none;
+        margin-bottom: 4rem;
+      }
+      .section.active {
+        display: block;
+      }
 
-    /* ── HERO ───────────────────────────────────────────── */
-    .hero {
-      background: var(--white);
-      border-bottom: 1px solid var(--rule);
-      padding: 5rem 2rem 4.5rem;
-    }
-    .hero-inner {
-      max-width: var(--max); margin: 0 auto;
-      display: grid; grid-template-columns: auto 1fr;
-      gap: 3.5rem; align-items: start;
-    }
-    .hero-photo-wrap {
-      flex-shrink: 0;
-      line-height: 0;
-    }
-    .hero-photo-wrap::before { display: none; }
-    .hero-photo {
-      display: block;
-      width: 220px;
-      height: 280px;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: 4px;
-      box-shadow: 0 8px 30px rgba(80,0,0,0.18);
-    }
-    .hero-photo-placeholder {
-      width: 220px; height: 280px;
-      background: var(--maroon-pale);
-      border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--maroon); font-size: 4rem; font-family: var(--font-display);
-      font-weight: 300;
-    }
-    .hero-eyebrow {
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--maroon); margin-bottom: 0.75rem;
-    }
-    .hero-name {
-      font-family: var(--font-display);
-      font-size: clamp(2.6rem, 5vw, 3.8rem);
-      font-weight: 300; line-height: 1.1;
-      color: var(--ink); margin-bottom: 0.4rem;
-      letter-spacing: -0.01em;
-    }
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: 1.25rem; font-weight: 400; font-style: italic;
-      color: var(--ink-mid); margin-bottom: 0.2rem;
-    }
-    .hero-dept {
-      font-size: 0.88rem; color: var(--ink-soft);
-      margin-bottom: 2rem;
-    }
-    .hero-rule {
-      width: 48px; height: 2px;
-      background: var(--maroon); margin-bottom: 1.6rem;
-    }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 2rem; }
-    .hero-meta-item {
-      display: flex; align-items: center; gap: 0.4rem;
-      font-size: 0.84rem; color: var(--ink-mid);
-    }
-    .hero-meta-item svg { color: var(--maroon); flex-shrink: 0; }
-    .hero-links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.5rem 1.1rem;
-      font-size: 0.78rem; font-weight: 500;
-      letter-spacing: 0.04em; text-transform: uppercase;
-      border-radius: 2px; transition: all 0.2s;
-      text-decoration: none;
-    }
-    .btn-primary {
-      background: var(--maroon); color: var(--white);
-    }
-    .btn-primary:hover { background: var(--maroon-light); text-decoration: none; }
-    .btn-outline {
-      border: 1.5px solid var(--maroon); color: var(--maroon);
-    }
-    .btn-outline:hover { background: var(--maroon-pale); text-decoration: none; }
+      /* ── HERO ───────────────────────────────────────────── */
+      .hero {
+        background: var(--white);
+        border-bottom: 1px solid var(--rule);
+        padding: 5rem 2rem 4.5rem;
+      }
+      .hero-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 3.5rem;
+        align-items: start;
+      }
+      .hero-photo-wrap {
+        flex-shrink: 0;
+        line-height: 0;
+      }
+      .hero-photo-wrap::before {
+        display: none;
+      }
+      .hero-photo {
+        display: block;
+        width: 220px;
+        height: 280px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 4px;
+        box-shadow: 0 8px 30px rgba(80, 0, 0, 0.18);
+      }
+      .hero-photo-placeholder {
+        width: 220px;
+        height: 280px;
+        background: var(--maroon-pale);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--maroon);
+        font-size: 4rem;
+        font-family: var(--font-display);
+        font-weight: 300;
+      }
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--maroon);
+        margin-bottom: 0.75rem;
+      }
+      .hero-name {
+        font-family: var(--font-display);
+        font-size: clamp(2.6rem, 5vw, 3.8rem);
+        font-weight: 300;
+        line-height: 1.1;
+        color: var(--ink);
+        margin-bottom: 0.4rem;
+        letter-spacing: -0.01em;
+      }
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--ink-mid);
+        margin-bottom: 0.2rem;
+      }
+      .hero-dept {
+        font-size: 0.88rem;
+        color: var(--ink-soft);
+        margin-bottom: 2rem;
+      }
+      .hero-rule {
+        width: 48px;
+        height: 2px;
+        background: var(--maroon);
+        margin-bottom: 1.6rem;
+      }
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        margin-bottom: 2rem;
+      }
+      .hero-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.84rem;
+        color: var(--ink-mid);
+      }
+      .hero-meta-item svg {
+        color: var(--maroon);
+        flex-shrink: 0;
+      }
+      .hero-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.5rem 1.1rem;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-radius: 2px;
+        transition: all 0.2s;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: var(--maroon);
+        color: var(--white);
+      }
+      .btn-primary:hover {
+        background: var(--maroon-light);
+        text-decoration: none;
+      }
+      .btn-outline {
+        border: 1.5px solid var(--maroon);
+        color: var(--maroon);
+      }
+      .btn-outline:hover {
+        background: var(--maroon-pale);
+        text-decoration: none;
+      }
 
-    /* ── MAIN LAYOUT ────────────────────────────────────── */
-    .main-wrap {
-      max-width: var(--max); margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-    }
-    .main-content { min-width: 0; }
-    .sidebar { display: none; }
+      /* ── MAIN LAYOUT ────────────────────────────────────── */
+      .main-wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 3rem 2rem 5rem;
+      }
+      .main-content {
+        min-width: 0;
+      }
+      .sidebar {
+        display: none;
+      }
 
-    /* ── SECTION ────────────────────────────────────────── */
-    .section-head {
-      display: flex; align-items: center; gap: 1rem;
-      margin-bottom: 1.8rem;
-    }
-    .section-head h2 {
-      font-family: var(--font-display);
-      font-size: 1.9rem; font-weight: 400;
-      color: var(--ink); letter-spacing: -0.01em;
-    }
-    .section-head-line {
-      flex: 1; height: 1px; background: var(--rule);
-    }
+      /* ── SECTION ────────────────────────────────────────── */
+      .section-head {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.8rem;
+      }
+      .section-head h2 {
+        font-family: var(--font-display);
+        font-size: 1.9rem;
+        font-weight: 400;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+      .section-head-line {
+        flex: 1;
+        height: 1px;
+        background: var(--rule);
+      }
 
-    /* ── ABOUT ──────────────────────────────────────────── */
-    .about-bio p {
-      font-size: 0.95rem; color: var(--ink-mid);
-      margin-bottom: 1rem; line-height: 1.8;
-    }
-    .edu-list { list-style: none; margin-top: 1.5rem; }
-    .edu-list li {
-      display: flex; gap: 1rem; align-items: baseline;
-      padding: 0.7rem 0;
-      border-bottom: 1px solid var(--rule);
-      font-size: 0.88rem;
-    }
-    .edu-list li:last-child { border-bottom: none; }
-    .edu-degree {
-      font-weight: 500; color: var(--maroon);
-      min-width: 36px; font-family: var(--font-display);
-      font-size: 1rem;
-    }
-    .edu-detail { color: var(--ink-mid); }
-    .edu-detail strong { color: var(--ink); font-weight: 500; }
-    .edu-year { margin-left: auto; color: var(--ink-soft); font-size: 0.82rem; }
+      /* ── ABOUT ──────────────────────────────────────────── */
+      .about-bio p {
+        font-size: 0.95rem;
+        color: var(--ink-mid);
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      }
+      .edu-list {
+        list-style: none;
+        margin-top: 1.5rem;
+      }
+      .edu-list li {
+        display: flex;
+        gap: 1rem;
+        align-items: baseline;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.88rem;
+      }
+      .edu-list li:last-child {
+        border-bottom: none;
+      }
+      .edu-degree {
+        font-weight: 500;
+        color: var(--maroon);
+        min-width: 36px;
+        font-family: var(--font-display);
+        font-size: 1rem;
+      }
+      .edu-detail {
+        color: var(--ink-mid);
+      }
+      .edu-detail strong {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .edu-year {
+        margin-left: auto;
+        color: var(--ink-soft);
+        font-size: 0.82rem;
+      }
 
-    /* ── RESEARCH CARDS ─────────────────────────────────── */
-    .research-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-    }
-    .research-card {
-      background: var(--white);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--maroon);
-      border-radius: 2px;
-      padding: 1.4rem 1.5rem;
-      transition: box-shadow 0.2s;
-    }
-    .research-card:hover { box-shadow: 0 4px 20px rgba(80,0,0,0.08); }
-    .research-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem; font-weight: 600;
-      color: var(--maroon); margin-bottom: 0.5rem;
-    }
-    .research-card p { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.65; }
+      /* ── RESEARCH CARDS ─────────────────────────────────── */
+      .research-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+      }
+      .research-card {
+        background: var(--white);
+        border: 1px solid var(--rule);
+        border-top: 3px solid var(--maroon);
+        border-radius: 2px;
+        padding: 1.4rem 1.5rem;
+        transition: box-shadow 0.2s;
+      }
+      .research-card:hover {
+        box-shadow: 0 4px 20px rgba(80, 0, 0, 0.08);
+      }
+      .research-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--maroon);
+        margin-bottom: 0.5rem;
+      }
+      .research-card p {
+        font-size: 0.85rem;
+        color: var(--ink-mid);
+        line-height: 1.65;
+      }
 
-    /* ── NEWS ───────────────────────────────────────────── */
-    .news-list { list-style: none; }
-    .news-item {
-      display: grid; grid-template-columns: 90px 1fr;
-      gap: 1.2rem; padding: 1.2rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .news-item:last-child { border-bottom: none; }
-    .news-date {
-      font-size: 0.78rem; font-weight: 500;
-      color: var(--maroon); text-transform: uppercase;
-      letter-spacing: 0.06em; padding-top: 0.15rem;
-      line-height: 1.4;
-    }
-    .news-title {
-      font-size: 0.9rem; font-weight: 500;
-      color: var(--ink); margin-bottom: 0.3rem;
-    }
-    .news-title a { color: var(--ink); }
-    .news-title a:hover { color: var(--maroon); }
-    .news-desc { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.6; }
+      /* ── NEWS ───────────────────────────────────────────── */
+      .news-list {
+        list-style: none;
+      }
+      .news-item {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 1.2rem;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      .news-item:last-child {
+        border-bottom: none;
+      }
+      .news-date {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--maroon);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding-top: 0.15rem;
+        line-height: 1.4;
+      }
+      .news-title {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 0.3rem;
+      }
+      .news-title a {
+        color: var(--ink);
+      }
+      .news-title a:hover {
+        color: var(--maroon);
+      }
+      .news-desc {
+        font-size: 0.84rem;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
 
-    /* ── PUBLICATIONS ───────────────────────────────────── */
-    .pub-year-group { margin-bottom: 2rem; }
-    .pub-year-label {
-      font-family: var(--font-display);
-      font-size: 1.4rem; font-weight: 300;
-      color: var(--maroon); margin-bottom: 0.8rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 2px solid var(--maroon-pale);
-    }
-    .pub-list { list-style: none; }
-    .pub-item {
-      padding: 0.9rem 0 0.9rem 1rem;
-      border-left: 2px solid var(--rule);
-      margin-bottom: 0.8rem;
-      transition: border-color 0.2s;
-    }
-    .pub-item:hover { border-left-color: var(--maroon); }
-    .pub-title {
-      font-size: 0.92rem; font-weight: 500;
-      color: var(--ink); margin-bottom: 0.2rem;
-    }
-    .pub-title a { color: var(--ink); }
-    .pub-title a:hover { color: var(--maroon); }
-    .pub-authors { font-size: 0.82rem; color: var(--ink-soft); margin-bottom: 0.15rem; }
-    .pub-venue {
-      font-size: 0.82rem; color: var(--maroon);
-      font-style: italic;
-    }
-    .pub-venue span { color: var(--ink-soft); font-style: normal; }
+      /* ── PUBLICATIONS ───────────────────────────────────── */
+      .pub-year-group {
+        margin-bottom: 2rem;
+      }
+      .pub-year-label {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--maroon);
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 2px solid var(--maroon-pale);
+      }
+      .pub-list {
+        list-style: none;
+      }
+      .pub-item {
+        padding: 0.9rem 0 0.9rem 1rem;
+        border-left: 2px solid var(--rule);
+        margin-bottom: 0.8rem;
+        transition: border-color 0.2s;
+      }
+      .pub-item:hover {
+        border-left-color: var(--maroon);
+      }
+      .pub-title {
+        font-size: 0.92rem;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 0.2rem;
+      }
+      .pub-title a {
+        color: var(--ink);
+      }
+      .pub-title a:hover {
+        color: var(--maroon);
+      }
+      .pub-authors {
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+        margin-bottom: 0.15rem;
+      }
+      .pub-venue {
+        font-size: 0.82rem;
+        color: var(--maroon);
+        font-style: italic;
+      }
+      .pub-venue span {
+        color: var(--ink-soft);
+        font-style: normal;
+      }
 
-    /* ── AWARDS ─────────────────────────────────────────── */
-    .awards-list { list-style: none; }
-    .award-item {
-      display: grid; grid-template-columns: 52px 1fr;
-      gap: 1rem; align-items: baseline;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .award-item:last-child { border-bottom: none; }
-    .award-year {
-      font-family: var(--font-display);
-      font-size: 1.05rem; font-weight: 600;
-      color: var(--maroon);
-    }
-    .award-title { font-size: 0.88rem; color: var(--ink-mid); }
-    .award-org { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.1rem; }
+      /* ── AWARDS ─────────────────────────────────────────── */
+      .awards-list {
+        list-style: none;
+      }
+      .award-item {
+        display: grid;
+        grid-template-columns: 52px 1fr;
+        gap: 1rem;
+        align-items: baseline;
+        padding: 0.85rem 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      .award-item:last-child {
+        border-bottom: none;
+      }
+      .award-year {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--maroon);
+      }
+      .award-title {
+        font-size: 0.88rem;
+        color: var(--ink-mid);
+      }
+      .award-org {
+        font-size: 0.78rem;
+        color: var(--ink-soft);
+        margin-top: 0.1rem;
+      }
 
-    /* ── STUDENTS ───────────────────────────────────────── */
-    .students-label {
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--ink-soft); margin-bottom: 1rem;
-      margin-top: 1.5rem;
-    }
-    .students-label:first-child { margin-top: 0; }
-    .students-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(130px,1fr));
-      gap: 1rem; margin-bottom: 1rem;
-    }
-    .student-card {
-      background: var(--white); border: 1px solid var(--rule);
-      border-radius: 2px; padding: 1rem; text-align: center;
-      transition: box-shadow 0.2s;
-    }
-    .student-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
-    .student-avatar {
-      width: 64px; height: 64px; border-radius: 50%;
-      object-fit: cover; margin: 0 auto 0.6rem;
-      border: 2px solid var(--rule);
-    }
-    .student-avatar-placeholder {
-      width: 64px; height: 64px; border-radius: 50%;
-      background: var(--maroon-pale);
-      margin: 0 auto 0.6rem;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.4rem; color: var(--maroon); font-weight: 300;
-    }
-    .student-name { font-size: 0.82rem; font-weight: 500; color: var(--ink); }
-    .student-degree { font-size: 0.75rem; color: var(--ink-soft); }
-    .student-company { font-size: 0.75rem; color: var(--maroon); margin-top: 0.2rem; }
+      /* ── STUDENTS ───────────────────────────────────────── */
+      .students-label {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+      }
+      .students-label:first-child {
+        margin-top: 0;
+      }
+      .students-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .student-card {
+        background: var(--white);
+        border: 1px solid var(--rule);
+        border-radius: 2px;
+        padding: 1rem;
+        text-align: center;
+        transition: box-shadow 0.2s;
+      }
+      .student-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+      }
+      .student-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 0.6rem;
+        border: 2px solid var(--rule);
+      }
+      .student-avatar-placeholder {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: var(--maroon-pale);
+        margin: 0 auto 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        color: var(--maroon);
+        font-weight: 300;
+      }
+      .student-name {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .student-degree {
+        font-size: 0.75rem;
+        color: var(--ink-soft);
+      }
+      .student-company {
+        font-size: 0.75rem;
+        color: var(--maroon);
+        margin-top: 0.2rem;
+      }
 
-    /* ── TEACHING ───────────────────────────────────────── */
-    .teaching-list { list-style: none; }
-    .teaching-item {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.85rem 1rem;
-      background: var(--white); border: 1px solid var(--rule);
-      border-radius: 2px; margin-bottom: 0.6rem;
-      transition: border-color 0.2s;
-    }
-    .teaching-item:hover { border-color: var(--maroon); }
-    .teaching-name { font-size: 0.9rem; font-weight: 500; color: var(--ink); }
-    .teaching-level {
-      font-size: 0.75rem; color: var(--maroon);
-      background: var(--maroon-pale); padding: 0.2rem 0.6rem;
-      border-radius: 20px; white-space: nowrap;
-    }
+      /* ── TEACHING ───────────────────────────────────────── */
+      .teaching-list {
+        list-style: none;
+      }
+      .teaching-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1rem;
+        background: var(--white);
+        border: 1px solid var(--rule);
+        border-radius: 2px;
+        margin-bottom: 0.6rem;
+        transition: border-color 0.2s;
+      }
+      .teaching-item:hover {
+        border-color: var(--maroon);
+      }
+      .teaching-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .teaching-level {
+        font-size: 0.75rem;
+        color: var(--maroon);
+        background: var(--maroon-pale);
+        padding: 0.2rem 0.6rem;
+        border-radius: 20px;
+        white-space: nowrap;
+      }
 
-    /* ── SIDEBAR ────────────────────────────────────────── */
-    .sidebar-card {
-      background: var(--white); border: 1px solid var(--rule);
-      border-radius: 2px; padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .sidebar-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem; font-weight: 600;
-      color: var(--ink); margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--rule);
-    }
-    .contact-row {
-      display: flex; align-items: flex-start; gap: 0.6rem;
-      font-size: 0.84rem; color: var(--ink-mid);
-      margin-bottom: 0.75rem;
-    }
-    .contact-row svg { color: var(--maroon); flex-shrink: 0; margin-top: 2px; }
-    .contact-row a { color: var(--maroon); }
-    .sidebar-links { list-style: none; }
-    .sidebar-links li { margin-bottom: 0.5rem; }
-    .sidebar-links a {
-      font-size: 0.84rem; color: var(--maroon);
-      display: flex; align-items: center; gap: 0.4rem;
-    }
-    .sidebar-links a:hover { text-decoration: underline; }
-    .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .tag {
-      font-size: 0.74rem; padding: 0.25rem 0.65rem;
-      background: var(--maroon-pale); color: var(--maroon);
-      border-radius: 20px; font-weight: 500;
-    }
+      /* ── SIDEBAR ────────────────────────────────────────── */
+      .sidebar-card {
+        background: var(--white);
+        border: 1px solid var(--rule);
+        border-radius: 2px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .sidebar-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--rule);
+      }
+      .contact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.84rem;
+        color: var(--ink-mid);
+        margin-bottom: 0.75rem;
+      }
+      .contact-row svg {
+        color: var(--maroon);
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .contact-row a {
+        color: var(--maroon);
+      }
+      .sidebar-links {
+        list-style: none;
+      }
+      .sidebar-links li {
+        margin-bottom: 0.5rem;
+      }
+      .sidebar-links a {
+        font-size: 0.84rem;
+        color: var(--maroon);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .sidebar-links a:hover {
+        text-decoration: underline;
+      }
+      .tag-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .tag {
+        font-size: 0.74rem;
+        padding: 0.25rem 0.65rem;
+        background: var(--maroon-pale);
+        color: var(--maroon);
+        border-radius: 20px;
+        font-weight: 500;
+      }
 
-    /* ── FOOTER ─────────────────────────────────────────── */
-    footer {
-      background: var(--maroon);
-      color: rgba(255,255,255,0.75);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-    }
-    footer a { color: rgba(255,255,255,0.9); }
-    footer strong { color: var(--white); }
+      /* ── FOOTER ─────────────────────────────────────────── */
+      footer {
+        background: var(--maroon);
+        color: rgba(255, 255, 255, 0.75);
+        padding: 2.5rem 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+      footer a {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      footer strong {
+        color: var(--white);
+      }
 
-    /* ── RESPONSIVE ─────────────────────────────────────── */
-    @media (max-width: 860px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-photo, .hero-photo-placeholder { width: 160px; height: 200px; }
-      .main-wrap { grid-template-columns: 1fr; }
-      .sidebar { order: -1; }
-      .research-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-    }
-  </style>
-</head>
-<body>
+      /* ── RESPONSIVE ─────────────────────────────────────── */
+      @media (max-width: 860px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .hero-photo,
+        .hero-photo-placeholder {
+          width: 160px;
+          height: 200px;
+        }
+        .main-wrap {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          order: -1;
+        }
+        .research-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="top-nav"></nav>
 
-<!-- NAV -->
-<nav id="top-nav"></nav>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner" id="hero-content"></div>
+    </header>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-inner" id="hero-content"></div>
-</header>
+    <!-- MAIN -->
+    <div class="main-wrap">
+      <main class="main-content" id="main-sections"></main>
+      <aside class="sidebar" id="sidebar-content"></aside>
+    </div>
 
-<!-- MAIN -->
-<div class="main-wrap">
-  <main class="main-content" id="main-sections"></main>
-  <aside class="sidebar" id="sidebar-content"></aside>
-</div>
+    <!-- FOOTER -->
+    <footer id="site-footer"></footer>
 
-<!-- FOOTER -->
-<footer id="site-footer"></footer>
+    <script>
+      // ── HELPERS ──────────────────────────────────────────────
+      async function load(file) {
+        const r = await fetch(`data/${file}`);
+        if (!r.ok) throw new Error(`Cannot load data/${file}`);
+        return r.json();
+      }
 
-<script>
-// ── HELPERS ──────────────────────────────────────────────
-async function load(file) {
-  const r = await fetch(`data/${file}`);
-  if (!r.ok) throw new Error(`Cannot load data/${file}`);
-  return r.json();
-}
+      function icon(name) {
+        const icons = {
+          email: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>`,
+          phone: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+          office: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+          scholar: `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>`,
+          lab: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>`,
+          link: `<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+          profile: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+        };
+        return icons[name] || "";
+      }
 
-function icon(name) {
-  const icons = {
-    email: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>`,
-    phone: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
-    office: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-    scholar: `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>`,
-    lab: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>`,
-    link: `<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
-    profile: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
-  };
-  return icons[name] || '';
-}
-
-// ── RENDER NAV ───────────────────────────────────────────
-function renderNav(sections, profile) {
-  const visible = sections.filter(s => s.enabled);
-  document.getElementById('top-nav').innerHTML = `
+      // ── RENDER NAV ───────────────────────────────────────────
+      function renderNav(sections, profile) {
+        const visible = sections.filter((s) => s.enabled);
+        document.getElementById("top-nav").innerHTML = `
     <div class="nav-inner">
       <span class="nav-brand">${profile.name}</span>
       <ul class="nav-links">
-        ${visible.map(s => `<li><a href="#${s.id}">${s.title}</a></li>`).join('')}
+        ${visible.map((s) => `<li><a href="#${s.id}">${s.title}</a></li>`).join("")}
       </ul>
     </div>`;
-}
+      }
 
-// ── RENDER HERO ──────────────────────────────────────────
-function renderHero(p) {
-  const photoEl = p.photo
-    ? `<img class="hero-photo" src="${p.photo}" alt="${p.name}" onerror="this.replaceWith(document.getElementById('photo-fallback').content.cloneNode(true))">`
-    : `<div class="hero-photo-placeholder">AT</div>`;
+      // ── RENDER HERO ──────────────────────────────────────────
+      function renderHero(p) {
+        const photoEl = p.photo
+          ? `<img class="hero-photo" src="${p.photo}" alt="${p.name}" onerror="this.replaceWith(document.getElementById('photo-fallback').content.cloneNode(true))">`
+          : `<div class="hero-photo-placeholder">AT</div>`;
 
-  document.getElementById('hero-content').innerHTML = `
+        document.getElementById("hero-content").innerHTML = `
     <template id="photo-fallback"><div class="hero-photo-placeholder">AT</div></template>
     <div class="hero-photo-wrap">${photoEl}</div>
     <div class="hero-text">
@@ -467,167 +749,206 @@ function renderHero(p) {
       <p class="hero-dept">${p.department} &nbsp;·&nbsp; ${p.affiliation}</p>
       <div class="hero-rule"></div>
       <div class="hero-meta">
-        <span class="hero-meta-item">${icon('email')}&nbsp;<a href="mailto:${p.email}">${p.email}</a></span>
-        <span class="hero-meta-item">${icon('phone')}&nbsp;${p.phone}</span>
-        <span class="hero-meta-item">${icon('office')}&nbsp;${p.office}</span>
+        <span class="hero-meta-item">${icon("email")}&nbsp;<a href="mailto:${p.email}">${p.email}</a></span>
+        <span class="hero-meta-item">${icon("phone")}&nbsp;${p.phone}</span>
+        <span class="hero-meta-item">${icon("office")}&nbsp;${p.office}</span>
       </div>
       <div class="hero-links">
-        <a class="btn btn-primary" href="${p.google_scholar}" target="_blank">${icon('scholar')} Google Scholar</a>
-        <a class="btn btn-outline" href="${p.lab_website}" target="_blank">${icon('lab')} VERITAS Lab</a>
-        <a class="btn btn-outline" href="${p.tamu_profile}" target="_blank">${icon('profile')} TAMU Profile</a>
+        <a class="btn btn-primary" href="${p.google_scholar}" target="_blank">${icon("scholar")} Google Scholar</a>
+        <a class="btn btn-outline" href="${p.lab_website}" target="_blank">${icon("lab")} VERITAS Lab</a>
+        <a class="btn btn-outline" href="${p.tamu_profile}" target="_blank">${icon("profile")} TAMU Profile</a>
       </div>
     </div>`;
-}
+      }
 
-// ── RENDER ABOUT ─────────────────────────────────────────
-function renderAbout(p) {
-  const bioHtml = p.bio.map(b => `<p>${b}</p>`).join('');
-  const eduHtml = p.education.map(e => `
+      // ── RENDER ABOUT ─────────────────────────────────────────
+      function renderAbout(p) {
+        const bioHtml = p.bio.map((b) => `<p>${b}</p>`).join("");
+        const eduHtml = p.education
+          .map(
+            (e) => `
     <li>
       <span class="edu-degree">${e.degree}</span>
       <span class="edu-detail"><strong>${e.field}</strong>, ${e.institution}, ${e.location}</span>
       <span class="edu-year">${e.year}</span>
-    </li>`).join('');
-  return `
+    </li>`,
+          )
+          .join("");
+        return `
     <div class="about-bio">${bioHtml}</div>
     <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-top:2rem;margin-bottom:.6rem;">Education</h3>
     <ul class="edu-list">${eduHtml}</ul>`;
-}
+      }
 
-// ── RENDER RESEARCH ──────────────────────────────────────
-function renderResearch(data) {
-  return `<div class="research-grid">
-    ${data.map(r => `
+      // ── RENDER RESEARCH ──────────────────────────────────────
+      function renderResearch(data) {
+        return `<div class="research-grid">
+    ${data
+      .map(
+        (r) => `
       <div class="research-card">
         <h3>${r.title}</h3>
         <p>${r.description}</p>
-      </div>`).join('')}
+      </div>`,
+      )
+      .join("")}
   </div>`;
-}
+      }
 
-// ── RENDER NEWS ──────────────────────────────────────────
-function renderNews(data) {
-  return `<ul class="news-list">
-    ${data.map(n => `
+      // ── RENDER NEWS ──────────────────────────────────────────
+      function renderNews(data) {
+        return `<ul class="news-list">
+    ${data
+      .map(
+        (n) => `
       <li class="news-item">
         <span class="news-date">${n.date}</span>
         <div>
           <p class="news-title"><a href="${n.link}" target="_blank">${n.title}</a></p>
           <p class="news-desc">${n.description}</p>
         </div>
-      </li>`).join('')}
+      </li>`,
+      )
+      .join("")}
   </ul>`;
-}
+      }
 
-// ── RENDER PUBLICATIONS ──────────────────────────────────
-function renderPublications(data) {
-  const byYear = {};
-  data.forEach(p => {
-    if (!byYear[p.year]) byYear[p.year] = [];
-    byYear[p.year].push(p);
-  });
-  const years = Object.keys(byYear).sort((a,b) => b-a);
-  return years.map(yr => `
+      // ── RENDER PUBLICATIONS ──────────────────────────────────
+      function renderPublications(data) {
+        const byYear = {};
+        data.forEach((p) => {
+          if (!byYear[p.year]) byYear[p.year] = [];
+          byYear[p.year].push(p);
+        });
+        const years = Object.keys(byYear).sort((a, b) => b - a);
+        return years
+          .map(
+            (yr) => `
     <div class="pub-year-group">
       <div class="pub-year-label">${yr}</div>
       <ul class="pub-list">
-        ${byYear[yr].map(p => `
+        ${byYear[yr]
+          .map(
+            (p) => `
           <li class="pub-item">
             <p class="pub-title"><a href="${p.link}" target="_blank">${p.title}</a></p>
             <p class="pub-authors">${p.authors}</p>
             <p class="pub-venue"><em>${p.venue}</em> <span>· ${p.month}</span></p>
-          </li>`).join('')}
+          </li>`,
+          )
+          .join("")}
       </ul>
-    </div>`).join('');
-}
+    </div>`,
+          )
+          .join("");
+      }
 
-// ── RENDER AWARDS ────────────────────────────────────────
-function renderAwards(data) {
-  return `<ul class="awards-list">
-    ${data.map(a => `
+      // ── RENDER AWARDS ────────────────────────────────────────
+      function renderAwards(data) {
+        return `<ul class="awards-list">
+    ${data
+      .map(
+        (a) => `
       <li class="award-item">
         <span class="award-year">${a.year}</span>
         <div>
           <p class="award-title">${a.title}</p>
           <p class="award-org">${a.org}</p>
         </div>
-      </li>`).join('')}
+      </li>`,
+      )
+      .join("")}
   </ul>`;
-}
+      }
 
-// ── RENDER STUDENTS ──────────────────────────────────────
-function renderStudents(data) {
-  function card(s, showCompany, showRole) {
-    const initials = s.name.trim().split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
-    const photo = s.photo
-      ? `<img class="student-avatar" src="${s.photo}" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      : '';
-    const fallback = `<div class="student-avatar-placeholder" ${s.photo ? 'style="display:none"' : ''}>${initials}</div>`;
-    return `
+      // ── RENDER STUDENTS ──────────────────────────────────────
+      function renderStudents(data) {
+        function card(s, showCompany, showRole) {
+          const initials = s.name
+            .trim()
+            .split(" ")
+            .map((w) => w[0])
+            .join("")
+            .slice(0, 2)
+            .toUpperCase();
+          const photo = s.photo
+            ? `<img class="student-avatar" src="${s.photo}" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+            : "";
+          const fallback = `<div class="student-avatar-placeholder" ${s.photo ? 'style="display:none"' : ""}>${initials}</div>`;
+          return `
       <div class="student-card">
         ${photo}${fallback}
         <p class="student-name">${s.name}</p>
         <p class="student-degree">${showRole ? s.role : s.degree}</p>
-        ${showCompany && s.current_position ? `<p class="student-company">${s.current_position}</p>` : ''}
+        ${showCompany && s.current_position ? `<p class="student-company">${s.current_position}</p>` : ""}
       </div>`;
-  }
-  const collabHtml = data.collaborators && data.collaborators.length
-    ? `<p class="students-label">Collaborators</p>
-       <div class="students-grid">${data.collaborators.map(s => card(s, false, true)).join('')}</div>`
-    : '';
-  return `
+        }
+        const collabHtml =
+          data.collaborators && data.collaborators.length
+            ? `<p class="students-label">Collaborators</p>
+       <div class="students-grid">${data.collaborators.map((s) => card(s, false, true)).join("")}</div>`
+            : "";
+        return `
     ${collabHtml}
     <p class="students-label">Current Students</p>
-    <div class="students-grid">${data.current.map(s => card(s, false, false)).join('')}</div>
+    <div class="students-grid">${data.current.map((s) => card(s, false, false)).join("")}</div>
     <p class="students-label">Alumni</p>
-    <div class="students-grid">${data.alumni.map(s => card(s, true, false)).join('')}</div>`;
-}
+    <div class="students-grid">${data.alumni.map((s) => card(s, true, false)).join("")}</div>`;
+      }
 
-// ── RENDER TEACHING ──────────────────────────────────────
-function renderTeaching(data) {
-  return `<ul class="teaching-list">
-    ${data.map(c => `
+      // ── RENDER TEACHING ──────────────────────────────────────
+      function renderTeaching(data) {
+        return `<ul class="teaching-list">
+    ${data
+      .map(
+        (c) => `
       <li class="teaching-item">
         <span class="teaching-name">${c.name}</span>
         <span class="teaching-level">${c.level}</span>
-      </li>`).join('')}
+      </li>`,
+      )
+      .join("")}
   </ul>`;
-}
+      }
 
-// ── RENDER CONTACT (sidebar compact) ─────────────────────
-function renderContactCompact(p) {
-  return `
-    <div class="contact-row">${icon('email')} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
-    <div class="contact-row">${icon('phone')} <span>${p.phone}</span></div>
-    <div class="contact-row">${icon('office')} <span>${p.office}, ${p.university}</span></div>`;
-}
+      // ── RENDER CONTACT (sidebar compact) ─────────────────────
+      function renderContactCompact(p) {
+        return `
+    <div class="contact-row">${icon("email")} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
+    <div class="contact-row">${icon("phone")} <span>${p.phone}</span></div>
+    <div class="contact-row">${icon("office")} <span>${p.office}, ${p.university}</span></div>`;
+      }
 
-// ── RENDER CONTACT (full section) ────────────────────────
-function renderContact(p) {
-  return `
+      // ── RENDER CONTACT (full section) ────────────────────────
+      function renderContact(p) {
+        return `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
       <div>
+        <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.8;margin-bottom:0.5rem;">
+          Welcome! Dr. Tyagi is open to inquiries from prospective PhD students, independent
+          researchers, industry partners, and organizations interested in collaborating on
+          hardware verification, AI-driven EDA, and related research areas.
+        </p>
         <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1.5rem;">
-          Dr. Tyagi welcomes inquiries from prospective PhD students, industry collaborators,
-          and researchers interested in hardware verification, CPU design, and AI-driven EDA.
-          Please use the form or reach out directly via email with a brief introduction and
-          the nature of your inquiry.
+          Please use the form to introduce yourself and describe the nature of your inquiry.
+          Dr. Tyagi reviews all submissions and responds to relevant inquiries at the earliest
+          opportunity. For urgent matters, reach out directly by email.
         </p>
         <div style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--maroon);border-radius:2px;padding:1.4rem 1.6rem;margin-bottom:1.2rem;">
           <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:1rem;">Direct Contact</h3>
-          <div class="contact-row">${icon('email')} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
-          <div class="contact-row">${icon('phone')} <span>${p.phone}</span></div>
-          <div class="contact-row">${icon('office')} <span>${p.office} · Peterson Building, TAMU</span></div>
+          <div class="contact-row">${icon("email")} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
+          <div class="contact-row">${icon("phone")} <span>${p.phone}</span></div>
+          <div class="contact-row">${icon("office")} <span>${p.office} · Peterson Building, TAMU</span></div>
           <div style="margin-top:1.1rem;">
-            <a class="btn btn-primary" href="mailto:${p.email}">${icon('email')} Send Email</a>
+            <a class="btn btn-primary" href="mailto:${p.email}">${icon("email")} Send Email</a>
           </div>
         </div>
         <div style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:2px;padding:1.4rem 1.6rem;">
           <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:1rem;">Online Profiles</h3>
           <ul class="sidebar-links">
-            <li style="margin-bottom:.6rem;"><a href="${p.google_scholar}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;Google Scholar</a></li>
-            <li style="margin-bottom:.6rem;"><a href="${p.lab_website}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;VERITAS Lab</a></li>
-            <li style="margin-bottom:.6rem;"><a href="${p.tamu_profile}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;TAMU Faculty Profile</a></li>
+            <li style="margin-bottom:.6rem;"><a href="${p.google_scholar}" target="_blank" style="font-size:.88rem;">${icon("link")} &nbsp;Google Scholar</a></li>
+            <li style="margin-bottom:.6rem;"><a href="${p.lab_website}" target="_blank" style="font-size:.88rem;">${icon("link")} &nbsp;VERITAS Lab</a></li>
+            <li style="margin-bottom:.6rem;"><a href="${p.tamu_profile}" target="_blank" style="font-size:.88rem;">${icon("link")} &nbsp;TAMU Faculty Profile</a></li>
           </ul>
         </div>
         <p style="margin-top:1.2rem;font-size:.8rem;color:var(--ink-soft);line-height:1.6;">
@@ -637,11 +958,15 @@ function renderContact(p) {
         </p>
       </div>
       <div>
-        <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:1rem;">Send a Message</h3>
+        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:0.3rem;">Get in Touch</h3>
+        <p style="font-size:.84rem;color:var(--ink-soft);margin-bottom:1rem;line-height:1.6;">
+          Use this form for research inquiries, PhD admissions, industry collaborations,
+          independent researcher partnerships, or any other questions.
+        </p>
         <!-- REPLACE src below with your Google Form embed URL -->
         <!-- Steps: Open Google Form > Send button > Embed tab (< >) > copy the URL inside src="..." -->
         <iframe
-          src="GOOGLE_FORM_EMBED_URL_HERE"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeYnG5bJee1gPMl_0mdTD1mMQhKQoXDWakRxLp02QMS894Fpw/viewform?embedded=true"
           width="100%"
           height="700"
           frameborder="0"
@@ -655,66 +980,98 @@ function renderContact(p) {
         </p>
       </div>
     </div>`;
-}
+      }
 
-// ── SECTION RENDERER MAP ─────────────────────────────────
-// To add a new section: add entry to sections.json + create data file
-// + add a case here with your render function
-async function buildSection(sec, allData) {
-  switch(sec.id) {
-    case 'about':       return renderAbout(allData.profile);
-    case 'research':    return renderResearch(allData.research);
-    case 'news':        return renderNews(allData.news);
-    case 'publications':return renderPublications(allData.publications);
-    case 'awards':      return renderAwards(allData.awards);
-    case 'students':    return renderStudents(allData.students);
-    case 'teaching':    return renderTeaching(allData.teaching);
-    case 'contact':     return renderContact(allData.profile);
-    default:
-      // Generic fallback — just dumps the JSON as a list
-      const d = allData[sec.id];
-      if (!d) return '<p>No data found.</p>';
-      return `<pre style="font-size:.8rem;color:var(--ink-mid)">${JSON.stringify(d,null,2)}</pre>`;
-  }
-}
+      // ── SECTION RENDERER MAP ─────────────────────────────────
+      // To add a new section: add entry to sections.json + create data file
+      // + add a case here with your render function
+      async function buildSection(sec, allData) {
+        switch (sec.id) {
+          case "about":
+            return renderAbout(allData.profile);
+          case "research":
+            return renderResearch(allData.research);
+          case "news":
+            return renderNews(allData.news);
+          case "publications":
+            return renderPublications(allData.publications);
+          case "awards":
+            return renderAwards(allData.awards);
+          case "students":
+            return renderStudents(allData.students);
+          case "teaching":
+            return renderTeaching(allData.teaching);
+          case "contact":
+            return renderContact(allData.profile);
+          default:
+            // Generic fallback — just dumps the JSON as a list
+            const d = allData[sec.id];
+            if (!d) return "<p>No data found.</p>";
+            return `<pre style="font-size:.8rem;color:var(--ink-mid)">${JSON.stringify(d, null, 2)}</pre>`;
+        }
+      }
 
-// ── HASH ROUTING ─────────────────────────────────────────
-function showSection(hash, sections) {
-  const id = (hash || '').replace('#', '') || sections[0].id;
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const target = document.getElementById(id) || document.getElementById(sections[0].id);
-  if (target) target.classList.add('active');
-  const navLink = document.querySelector(`.nav-links a[href="#${target ? target.id : sections[0].id}"]`);
-  if (navLink) navLink.classList.add('active');
-  window.scrollTo(0, 0);
-}
+      // ── HASH ROUTING ─────────────────────────────────────────
+      function showSection(hash, sections) {
+        const id = (hash || "").replace("#", "") || sections[0].id;
+        document
+          .querySelectorAll(".section")
+          .forEach((s) => s.classList.remove("active"));
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) => a.classList.remove("active"));
+        const target =
+          document.getElementById(id) ||
+          document.getElementById(sections[0].id);
+        if (target) target.classList.add("active");
+        const navLink = document.querySelector(
+          `.nav-links a[href="#${target ? target.id : sections[0].id}"]`,
+        );
+        if (navLink) navLink.classList.add("active");
+        window.scrollTo(0, 0);
+      }
 
-// ── MAIN INIT ────────────────────────────────────────────
-(async () => {
-  try {
-    const [sections, profile, research, news, publications, awards, students, teaching] =
-      await Promise.all([
-        load('sections.json'),
-        load('profile.json'),
-        load('research.json'),
-        load('news.json'),
-        load('publications.json'),
-        load('awards.json'),
-        load('students.json'),
-        load('teaching.json')
-      ]);
+      // ── MAIN INIT ────────────────────────────────────────────
+      (async () => {
+        try {
+          const [
+            sections,
+            profile,
+            research,
+            news,
+            publications,
+            awards,
+            students,
+            teaching,
+          ] = await Promise.all([
+            load("sections.json"),
+            load("profile.json"),
+            load("research.json"),
+            load("news.json"),
+            load("publications.json"),
+            load("awards.json"),
+            load("students.json"),
+            load("teaching.json"),
+          ]);
 
-    const allData = { profile, research, news, publications, awards, students, teaching };
+          const allData = {
+            profile,
+            research,
+            news,
+            publications,
+            awards,
+            students,
+            teaching,
+          };
 
-    renderNav(sections, profile);
-    renderHero(profile);
+          renderNav(sections, profile);
+          renderHero(profile);
 
-    const visible = sections.filter(s => s.enabled);
-    let mainHtml = '';
-    for (const sec of visible) {
-      const body = await buildSection(sec, allData);
-      mainHtml += `
+          const visible = sections.filter((s) => s.enabled);
+          let mainHtml = "";
+          for (const sec of visible) {
+            const body = await buildSection(sec, allData);
+            mainHtml += `
         <section class="section" id="${sec.id}">
           <div class="section-head">
             <h2>${sec.title}</h2>
@@ -722,12 +1079,12 @@ function showSection(hash, sections) {
           </div>
           ${body}
         </section>`;
-    }
-    document.getElementById('main-sections').innerHTML = mainHtml;
+          }
+          document.getElementById("main-sections").innerHTML = mainHtml;
 
-    // Sidebar
-    const tags = research.map(r => r.title);
-    document.getElementById('sidebar-content').innerHTML = `
+          // Sidebar
+          const tags = research.map((r) => r.title);
+          document.getElementById("sidebar-content").innerHTML = `
       <div class="sidebar-card">
         <h3>Contact</h3>
         ${renderContactCompact(profile)}
@@ -735,32 +1092,33 @@ function showSection(hash, sections) {
       <div class="sidebar-card">
         <h3>Quick Links</h3>
         <ul class="sidebar-links">
-          <li><a href="${profile.google_scholar}" target="_blank">${icon('link')} Google Scholar</a></li>
-          <li><a href="${profile.lab_website}" target="_blank">${icon('link')} VERITAS Lab</a></li>
-          <li><a href="${profile.tamu_profile}" target="_blank">${icon('link')} TAMU Profile</a></li>
+          <li><a href="${profile.google_scholar}" target="_blank">${icon("link")} Google Scholar</a></li>
+          <li><a href="${profile.lab_website}" target="_blank">${icon("link")} VERITAS Lab</a></li>
+          <li><a href="${profile.tamu_profile}" target="_blank">${icon("link")} TAMU Profile</a></li>
         </ul>
       </div>
       <div class="sidebar-card">
         <h3>Research Areas</h3>
-        <div class="tag-cloud">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+        <div class="tag-cloud">${tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
       </div>`;
 
-    document.getElementById('site-footer').innerHTML = `
+          document.getElementById("site-footer").innerHTML = `
       <strong>${profile.name}</strong> &nbsp;·&nbsp; ${profile.title}, ${profile.department}<br>
       <span style="margin-top:.3rem;display:block">${profile.university} &nbsp;·&nbsp;
       <a href="mailto:${profile.email}">${profile.email}</a></span>`;
 
-    // Show section based on current hash, default to first section
-    showSection(window.location.hash, visible);
+          // Show section based on current hash, default to first section
+          showSection(window.location.hash, visible);
 
-    // Listen for nav clicks and browser back/forward
-    window.addEventListener('hashchange', () => showSection(window.location.hash, visible));
-
-  } catch(e) {
-    console.error('Page load error:', e);
-    document.body.innerHTML = `<p style="padding:2rem;color:red">Error loading page: ${e.message}. Open via a local server, not file://</p>`;
-  }
-})();
-</script>
-</body>
+          // Listen for nav clicks and browser back/forward
+          window.addEventListener("hashchange", () =>
+            showSection(window.location.hash, visible),
+          );
+        } catch (e) {
+          console.error("Page load error:", e);
+          document.body.innerHTML = `<p style="padding:2rem;color:red">Error loading page: ${e.message}. Open via a local server, not file://</p>`;
+        }
+      })();
+    </script>
+  </body>
 </html>

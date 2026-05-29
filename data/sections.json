@@ -4,7 +4,7 @@
   { "id": "news",         "title": "News",              "file": "news.json",          "enabled": true },
   { "id": "publications", "title": "Publications",      "file": "publications.json",  "enabled": true },
   { "id": "awards",       "title": "Awards & Honors",   "file": "awards.json",        "enabled": true },
-  { "id": "students",     "title": "Students",          "file": "students.json",      "enabled": true },
+  { "id": "students",     "title": "Students & Collaborators", "file": "students.json",      "enabled": true },
   { "id": "teaching",     "title": "Teaching",          "file": "teaching.json",      "enabled": true },
   { "id": "contact",      "title": "Contact",           "file": "profile.json",       "enabled": true }
 ]
