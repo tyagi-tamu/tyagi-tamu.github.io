@@ -3,7 +3,7 @@
     {
       "name": "Fenghua Wu",
       "degree": "PhD",
-      "photo": ""
+      "photo": "assets/img/fenghua.jpg"
     },
     {
       "name": "Chengjia Liu (Daniel)",
@@ -37,6 +37,13 @@
       "name": "Surya Jasper",
       "degree": "BS 2025",
       "current_position": "AMD, Inc.",
+      "photo": ""
+    }
+  ],
+  "collaborators": [
+    {
+      "name": "Deepak Panigrahy",
+      "role": "Independent Researcher",
       "photo": ""
     }
   ]

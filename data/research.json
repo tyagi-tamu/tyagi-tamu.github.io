@@ -18,5 +18,15 @@
     "title": "Software Testing",
     "description": "Conducting research in automated test generation, mutation testing, and program analysis to improve software quality and reliability across diverse application domains.",
     "icon": "code"
+  },
+  {
+    "title": "Agentic AI Systems & Energy Efficiency",
+    "description": "Developing frameworks to measure and optimize energy consumption in agentic AI workflows. Introduces Energy per Successful Goal (EpG) as a new accounting unit, replacing per-inference metrics for multi-step LLM orchestration systems.",
+    "icon": "brain"
+  },
+  {
+    "title": "AI Hardware Observability",
+    "description": "Investigating energy attribution gaps in edge AI hardware platforms. Establishing hardware requirements and calibration methods for process-level energy measurement in AI systems deployed on modern SoC-based devices.",
+    "icon": "chip"
   }
 ]

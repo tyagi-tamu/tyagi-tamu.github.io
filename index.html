@@ -67,6 +67,11 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--maroon); text-decoration: none; }
+    .nav-links a.active { color: var(--maroon); border-bottom: 2px solid var(--maroon); padding-bottom: 2px; }
+
+    /* ── HASH ROUTING ───────────────────────────────────── */
+    .section { display: none; margin-bottom: 4rem; }
+    .section.active { display: block; }
 
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
@@ -76,34 +81,27 @@
     }
     .hero-inner {
       max-width: var(--max); margin: 0 auto;
-      display: grid; grid-template-columns: 220px 1fr;
+      display: grid; grid-template-columns: auto 1fr;
       gap: 3.5rem; align-items: start;
     }
     .hero-photo-wrap {
-      position: relative;
-      padding: 10px 0 10px 10px; /* room for the decorative border on all overflow sides */
+      flex-shrink: 0;
+      line-height: 0;
     }
-    .hero-photo-wrap::before {
-      content: '';
-      position: absolute;
-      top: 2px; left: 2px;
-      width: 220px; height: 280px;
-      border: 2px solid var(--accent);
-      border-radius: 2px;
-      z-index: 0;
-    }
+    .hero-photo-wrap::before { display: none; }
     .hero-photo {
-      width: 220px; height: 280px;
-      object-fit: cover; object-position: top;
-      border-radius: 2px;
-      position: relative; z-index: 1;
-      margin-left: 8px; margin-top: 8px;
-      box-shadow: 0 8px 32px rgba(80,0,0,0.12);
+      display: block;
+      width: 220px;
+      height: 280px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 4px;
+      box-shadow: 0 8px 30px rgba(80,0,0,0.18);
     }
     .hero-photo-placeholder {
       width: 220px; height: 280px;
       background: var(--maroon-pale);
-      border-radius: 2px; position: relative; z-index: 1;
+      border-radius: 4px;
       display: flex; align-items: center; justify-content: center;
       color: var(--maroon); font-size: 4rem; font-family: var(--font-display);
       font-weight: 300;
@@ -161,15 +159,11 @@
     .main-wrap {
       max-width: var(--max); margin: 0 auto;
       padding: 3rem 2rem 5rem;
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 3rem; align-items: start;
     }
     .main-content { min-width: 0; }
-    .sidebar { min-width: 0; }
+    .sidebar { display: none; }
 
     /* ── SECTION ────────────────────────────────────────── */
-    .section { margin-bottom: 4rem; scroll-margin-top: 70px; }
     .section-head {
       display: flex; align-items: center; gap: 1rem;
       margin-bottom: 1.8rem;
@@ -563,7 +557,7 @@ function renderAwards(data) {
 
 // ── RENDER STUDENTS ──────────────────────────────────────
 function renderStudents(data) {
-  function card(s, showCompany) {
+  function card(s, showCompany, showRole) {
     const initials = s.name.trim().split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
     const photo = s.photo
       ? `<img class="student-avatar" src="${s.photo}" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
@@ -573,15 +567,20 @@ function renderStudents(data) {
       <div class="student-card">
         ${photo}${fallback}
         <p class="student-name">${s.name}</p>
-        <p class="student-degree">${s.degree}</p>
+        <p class="student-degree">${showRole ? s.role : s.degree}</p>
         ${showCompany && s.current_position ? `<p class="student-company">${s.current_position}</p>` : ''}
       </div>`;
   }
+  const collabHtml = data.collaborators && data.collaborators.length
+    ? `<p class="students-label">Collaborators</p>
+       <div class="students-grid">${data.collaborators.map(s => card(s, false, true)).join('')}</div>`
+    : '';
   return `
+    ${collabHtml}
     <p class="students-label">Current Students</p>
-    <div class="students-grid">${data.current.map(s => card(s, false)).join('')}</div>
+    <div class="students-grid">${data.current.map(s => card(s, false, false)).join('')}</div>
     <p class="students-label">Alumni</p>
-    <div class="students-grid">${data.alumni.map(s => card(s, true)).join('')}</div>`;
+    <div class="students-grid">${data.alumni.map(s => card(s, true, false)).join('')}</div>`;
 }
 
 // ── RENDER TEACHING ──────────────────────────────────────
@@ -606,28 +605,56 @@ function renderContactCompact(p) {
 // ── RENDER CONTACT (full section) ────────────────────────
 function renderContact(p) {
   return `
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
-      <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--maroon);border-radius:2px;padding:1.6rem 1.8rem;">
-        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:1.1rem;">Get in Touch</h3>
-        <div class="contact-row">${icon('email')} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
-        <div class="contact-row">${icon('phone')} <span>${p.phone}</span></div>
-        <div class="contact-row">${icon('office')} <span>${p.office}, ${p.university}</span></div>
-        <div style="margin-top:1.2rem;">
-          <a class="btn btn-primary" href="mailto:${p.email}" style="font-size:.78rem;">${icon('email')} Send Email</a>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
+      <div>
+        <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1.5rem;">
+          Dr. Tyagi welcomes inquiries from prospective PhD students, industry collaborators,
+          and researchers interested in hardware verification, CPU design, and AI-driven EDA.
+          Please use the form or reach out directly via email with a brief introduction and
+          the nature of your inquiry.
+        </p>
+        <div style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--maroon);border-radius:2px;padding:1.4rem 1.6rem;margin-bottom:1.2rem;">
+          <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:1rem;">Direct Contact</h3>
+          <div class="contact-row">${icon('email')} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
+          <div class="contact-row">${icon('phone')} <span>${p.phone}</span></div>
+          <div class="contact-row">${icon('office')} <span>${p.office} · Peterson Building, TAMU</span></div>
+          <div style="margin-top:1.1rem;">
+            <a class="btn btn-primary" href="mailto:${p.email}">${icon('email')} Send Email</a>
+          </div>
         </div>
+        <div style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:2px;padding:1.4rem 1.6rem;">
+          <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:1rem;">Online Profiles</h3>
+          <ul class="sidebar-links">
+            <li style="margin-bottom:.6rem;"><a href="${p.google_scholar}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;Google Scholar</a></li>
+            <li style="margin-bottom:.6rem;"><a href="${p.lab_website}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;VERITAS Lab</a></li>
+            <li style="margin-bottom:.6rem;"><a href="${p.tamu_profile}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;TAMU Faculty Profile</a></li>
+          </ul>
+        </div>
+        <p style="margin-top:1.2rem;font-size:.8rem;color:var(--ink-soft);line-height:1.6;">
+          Department of Computer Science &amp; Engineering<br>
+          Texas A&amp;M University, 435 Nagle Street<br>
+          College Station, TX 77843-3112
+        </p>
       </div>
-      <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:2px;padding:1.6rem 1.8rem;">
-        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:1.1rem;">Online Profiles</h3>
-        <ul class="sidebar-links">
-          <li style="margin-bottom:.7rem;"><a href="${p.google_scholar}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;Google Scholar</a></li>
-          <li style="margin-bottom:.7rem;"><a href="${p.lab_website}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;VERITAS Lab</a></li>
-          <li style="margin-bottom:.7rem;"><a href="${p.tamu_profile}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;TAMU Faculty Profile</a></li>
-        </ul>
+      <div>
+        <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:1rem;">Send a Message</h3>
+        <!-- REPLACE src below with your Google Form embed URL -->
+        <!-- Steps: Open Google Form > Send button > Embed tab (< >) > copy the URL inside src="..." -->
+        <iframe
+          src="GOOGLE_FORM_EMBED_URL_HERE"
+          width="100%"
+          height="700"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          style="border:1px solid var(--rule);border-radius:2px;display:block;">
+          Loading form...
+        </iframe>
+        <p style="font-size:.75rem;color:var(--ink-soft);margin-top:.5rem;">
+          Powered by Google Forms. Your response goes directly to Dr. Tyagi.
+        </p>
       </div>
-    </div>
-    <p style="margin-top:1.2rem;font-size:.84rem;color:var(--ink-soft);">
-      Department of Computer Science &amp; Engineering, Texas A&amp;M University, 435 Nagle Street, College Station, TX 77843-3112
-    </p>`;
+    </div>`;
 }
 
 // ── SECTION RENDERER MAP ─────────────────────────────────
@@ -649,6 +676,18 @@ async function buildSection(sec, allData) {
       if (!d) return '<p>No data found.</p>';
       return `<pre style="font-size:.8rem;color:var(--ink-mid)">${JSON.stringify(d,null,2)}</pre>`;
   }
+}
+
+// ── HASH ROUTING ─────────────────────────────────────────
+function showSection(hash, sections) {
+  const id = (hash || '').replace('#', '') || sections[0].id;
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const target = document.getElementById(id) || document.getElementById(sections[0].id);
+  if (target) target.classList.add('active');
+  const navLink = document.querySelector(`.nav-links a[href="#${target ? target.id : sections[0].id}"]`);
+  if (navLink) navLink.classList.add('active');
+  window.scrollTo(0, 0);
 }
 
 // ── MAIN INIT ────────────────────────────────────────────
@@ -710,6 +749,12 @@ async function buildSection(sec, allData) {
       <strong>${profile.name}</strong> &nbsp;·&nbsp; ${profile.title}, ${profile.department}<br>
       <span style="margin-top:.3rem;display:block">${profile.university} &nbsp;·&nbsp;
       <a href="mailto:${profile.email}">${profile.email}</a></span>`;
+
+    // Show section based on current hash, default to first section
+    showSection(window.location.hash, visible);
+
+    // Listen for nav clicks and browser back/forward
+    window.addEventListener('hashchange', () => showSection(window.location.hash, visible));
 
   } catch(e) {
     console.error('Page load error:', e);

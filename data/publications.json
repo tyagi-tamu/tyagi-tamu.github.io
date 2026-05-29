@@ -1,48 +1,88 @@
 [
   {
+    "year": 2026,
+    "title": "The Energy Blind Spot: NVIDIA's Flagship Edge AI Hardware Cannot Support Process-Level Energy Attribution",
+    "authors": "Deepak Panigrahy, Aakash Tyagi",
+    "venue": "arXiv preprint",
+    "month": "May 2026",
+    "link": "https://arxiv.org/abs/2605.27599"
+  },
+  {
+    "year": 2026,
+    "title": "Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems",
+    "authors": "Deepak Panigrahy, Aakash Tyagi",
+    "venue": "arXiv preprint",
+    "month": "May 2026",
+    "link": "https://arxiv.org/abs/2605.22883"
+  },
+  {
+    "year": 2025,
+    "title": "Combining compression, partitioning and quantization of DL models for fitment in hardware processors",
+    "authors": "Swarnava Dey, Arpan Pal, Gitesh Kulkarni, Chirabrata Bhaumik, Arijit Ukil, Jayeeta MONDAL, Ishan SAHU, Aakash TYAGI, Amit SWAIN, Arijit Mukherjee",
+    "venue": "US Patent 12,430,558",
+    "month": "September 2025",
+    "link": "https://patents.google.com/patent/US12430558B2/en"
+  },
+  {
     "year": 2025,
     "title": "Improving Last-Mile Coverage in Functional Verification",
-    "authors": "C. Liu, P. Parlapalli, D.K. Houngninou, M. Quinn, A. Tyagi, J. Hu",
-    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "authors": "Chengjia Liu, Jnana Preeti Parlapalli, David Kebo Houngninou, Michael Quinn, Aakash Tyagi, Jiang Hu",
+    "venue": "2025 ACM/IEEE 7th Symposium on Machine Learning for CAD (MLCAD)",
     "month": "September 2025",
-    "link": "https://dl.acm.org/doi/abs/10.1109/ICSE-SEIP58684.2023.00037"
+    "link": "https://ieeexplore.ieee.org/abstract/document/11189220"
   },
   {
     "year": 2025,
     "title": "BugGen: A Self-Correcting Multi-Agent LLM Pipeline for Realistic RTL Bug Synthesis",
-    "authors": "S. Jasper, M. Luu, E. Pan, A. Tyagi, M. Quinn, J. Hu, D.K. Houngninou",
-    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "authors": "Surya Jasper, Minh Luu, Evan Pan, Aakash Tyagi, Michael Quinn, Jiang Hu, David Houngninou",
+    "venue": "2025 ACM/IEEE 7th Symposium on Machine Learning for CAD (MLCAD)",
     "month": "September 2025",
-    "link": "https://arxiv.org/abs/2506.10501"
+    "link": "https://ieeexplore.ieee.org/abstract/document/11189127/"
   },
   {
     "year": 2025,
     "title": "VCDiag: Classifying Erroneous Waveforms for Failure Triage Acceleration",
-    "authors": "M. Luu, S. Jasper, K. Le, E. Pan, M. Quinn, A. Tyagi, J. Hu",
-    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "authors": "Minh Luu, Surya Jasper, Khoi Le, Evan Pan, Michael Quinn, Aakash Tyagi, Jiang Hu",
+    "venue": "2025 ACM/IEEE 7th Symposium on Machine Learning for CAD (MLCAD)",
     "month": "September 2025",
-    "link": "https://arxiv.org/abs/2506.03590"
+    "link": "https://ieeexplore.ieee.org/abstract/document/11189168/"
+  },
+  {
+    "year": 2025,
+    "title": "Spec2Assertion: Automatic pre-RTL assertion generation using large language models with progressive regularization",
+    "authors": "Fenghua Wu, Evan Pan, Rahul Kande, Michael Quinn, Aakash Tyagi, David Kebo Houngninou, Jeyavijayan Rajendran, Jiang Hu",
+    "venue": "arXiv preprint",
+    "month": "May 2025",
+    "link": "https://arxiv.org/abs/2505.07995"
   },
   {
     "year": 2024,
     "title": "MinBLoG: Minimization of Boolean Logic Functions using Graph Attention Network",
-    "authors": "P. Sengupta, A. Tyagi, J. Hu, V.K. Rajan, H. Mostafa, S. Majumdar",
+    "authors": "Prianka Sengupta, Aakash Tyagi, Jiang Hu, Vivek K Rajan, Hesham Mostafa, Somdeb Majumdar",
     "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
     "month": "September 2024",
     "link": "https://dl.acm.org/doi/10.1145/3670474.3685962"
   },
   {
     "year": 2023,
-    "title": "Quick Identification of Timing Critical Components in RTL Designs",
-    "authors": "P. Sengupta, A. Tyagi, Y. Chen, J. Hu",
-    "venue": "IEEE/ACM MLCAD Workshop",
+    "title": "Early identification of timing critical rtl components using ml based path delay prediction",
+    "authors": "Prianka Sengupta, Aakash Tyagi, Yiran Chen, Jiang Hu",
+    "venue": "2023 ACM/IEEE 5th Workshop on Machine Learning for CAD (MLCAD)",
     "month": "September 2023",
     "link": "https://ieeexplore.ieee.org/document/10299879"
   },
   {
     "year": 2023,
+    "title": "2023 IEEE International Symposium on Hardware Oriented Security and Trust (HOST)",
+    "authors": "Ro Cammarota, Vincent Mooney, Farimah Farahmandi, Sheng Wei, Mehran Mozaffari Kermani",
+    "venue": "2023 IEEE International Symposium",
+    "month": "May 2023",
+    "link": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10133356"
+  },
+  {
+    "year": 2023,
     "title": "HyPFuzz: Formal-Assisted Processor Fuzzing",
-    "authors": "C. Chen, R. Kande, F. Andersen, A. Tyagi, A. Sadeghi, J. Rajendran",
+    "authors": "Chen Chen, Rahul Kande, Nathan Nguyen, Flemming Andersen, Aakash Tyagi, Ahmad-Reza Sadeghi, Jeyavijayan Rajendran",
     "venue": "32nd USENIX Security Symposium",
     "month": "August 2023",
     "link": "https://www.usenix.org/conference/usenixsecurity23/presentation/chen-chen"
@@ -50,33 +90,145 @@
   {
     "year": 2022,
     "title": "How Good Is Your Verilog RTL Code? A Quick Answer from Machine Learning",
-    "authors": "P. Sengupta, A. Tyagi, Y. Chen, J. Hu",
+    "authors": "Prianka Sengupta, Aakash Tyagi, Yiran Chen, Jiang Hu",
     "venue": "International Conference on Computer Aided Design",
-    "month": "November 2022",
+    "month": "October 2022",
     "link": "https://dl.acm.org/doi/10.1145/3508352.3549375"
   },
   {
     "year": 2022,
-    "title": "TheHuzz: Instruction Fuzzing of Processors using Golden Reference Models for finding Software-Exploitable Vulnerabilities",
-    "authors": "R. Kande, A. Crump, G. Persyn, P. Jauernig, A. Tyagi, A. Sadeghi, J.V. Rajendran",
-    "venue": "31st USENIX Security Symposium",
-    "month": "August 2022",
-    "link": "https://www.usenix.org/conference/usenixsecurity22/presentation/kande"
+    "title": "Transaction level stimulus optimization in functional verification using machine learning predictors",
+    "authors": "Saumil Gogri, Aakash Tyagi, Michael Quinn, Jiang Hu",
+    "venue": "2022 23rd International Symposium on Quality Electronic Design (ISQED)",
+    "month": "April 2022",
+    "link": "https://ieeexplore.ieee.org/abstract/document/9806210/"
   },
   {
     "year": 2022,
-    "title": "Transaction Level Stimulus Optimization in Functional Verification using Machine Learning Predictors",
-    "authors": "S. Gogri, A. Tyagi, M. Quinn, J. Hu",
-    "venue": "23rd International Symposium on Quality Electronic Design (ISQED)",
-    "month": "September 2022",
-    "link": "https://ieeexplore.ieee.org/document/9806210"
+    "title": "TheHuzz: Instruction Fuzzing of Processors using Golden Reference Models for finding Software-Exploitable Vulnerabilities",
+    "authors": "Aakash Tyagi, Addison Crump, Ahmad-Reza Sadeghi, Garrett Persyn, Jeyavijayan Rajendran, Patrick Jauernig, Rahul Kande",
+    "venue": "arXiv preprint",
+    "month": "January 2022",
+    "link": "https://arxiv.org/abs/2201.09941"
+  },
+  {
+    "year": 2022,
+    "title": "{TheHuzz}: Instruction fuzzing of processors using {Golden-Reference} models for finding {Software-Exploitable} vulnerabilities",
+    "authors": "Rahul Kande, Addison Crump, Garrett Persyn, Patrick Jauernig, Ahmad-Reza Sadeghi, Aakash Tyagi, Jeyavijayan Rajendran",
+    "venue": "31st USENIX Security Symposium (USENIX Security 22)",
+    "month": "2022",
+    "link": "https://www.usenix.org/conference/usenixsecurity22/presentation/kande"
   },
   {
     "year": 2020,
-    "title": "Machine Learning-Guided Stimulus Generation for Functional Verification",
-    "authors": "S. Gogri, J. Ju, A. Tyagi, et al.",
-    "venue": "DVCON, San Jose, CA",
+    "title": "Machine learning-guided stimulus generation for functional verification",
+    "authors": "Saumil Gogri, Jiang Hu, Aakash Tyagi, Mike Quinn, Swati Ramachandran, Fazia Batool, Amrutha Jagadeesh",
+    "venue": "Proceedings of the Design and Verification Conference (DVCON-USA), Virtual Conference",
     "month": "March 2020",
     "link": "https://dvcon-proceedings.org/wp-content/uploads/machine-learning-guided-stimulus-generation-for-functional-verification.pdf"
+  },
+  {
+    "year": 1995,
+    "title": "A post-processing algorithm for short-circuit defect sensitivity reduction in VLSI layouts",
+    "authors": "Neil Maldonado, Guy Andrus, Aakash Tyagi, Mohammad Madani, Magdy Bayoumi",
+    "venue": "Proceedings IEEE International Conference on Wafer Scale Integration (ICWSI)",
+    "month": "January 1995",
+    "link": "https://ieeexplore.ieee.org/abstract/document/515463"
+  },
+  {
+    "year": 1994,
+    "title": "The nature of defect patterns on integrated-circuit wafer maps",
+    "authors": "Aakash Tyagi, Magdy A Bayoumi",
+    "venue": "IEEE Transactions on Reliability",
+    "month": "March 1994",
+    "link": "https://ieeexplore.ieee.org/abstract/document/285103/"
+  },
+  {
+    "year": 1994,
+    "title": "Yield enhancement in the routing phase of integrated circuit layout synthesis",
+    "authors": "Aakash Tyagi, Magdy Bayoumi, Pmneetha Manthravadi",
+    "venue": "Proceedings of 1994 International Conference on Wafer Scale Integration (ICWSI)",
+    "month": "January 1994",
+    "link": "https://ieeexplore.ieee.org/abstract/document/291264/"
+  },
+  {
+    "year": 1994,
+    "title": "ULSI design-for-manufacturability: A yield enhancement approach",
+    "authors": "A Tyagi, Magdy A Bayoumi",
+    "venue": "Proceedings of 3rd International Workshop on the Economics of Design, Test and Manufacturing",
+    "month": "January 1994",
+    "link": "https://www.computer.org/csdl/proceedings-article/icedtm/1994/00496095/12OmNzmclrI"
+  },
+  {
+    "year": 1993,
+    "title": "Parallel implementation of a cut and paste maze routing algorithm",
+    "authors": "H Kumar, R Kalyan, M Bayoumi, A Tyagi, Nam Ling",
+    "venue": "1993 IEEE International Symposium on Circuits and Systems",
+    "month": "May 1993",
+    "link": "https://ieeexplore.ieee.org/abstract/document/394154/"
+  },
+  {
+    "year": 1993,
+    "title": "A framework for yield modeling and yield enhancement in integrated circuit design and fabrication",
+    "authors": "Aakash Tyagi",
+    "venue": "Dissertation, University of Southwestern Louisiana",
+    "month": "1993",
+    "link": "https://www.proquest.com/openview/52a70c5f706f4b7881302a04a93a6c2c/1?pq-origsite=gscholar&cbl=18750&diss=y"
+  },
+  {
+    "year": 1992,
+    "title": "Image segmentation on a 2D array by a directed split and merge procedure",
+    "authors": "A Tyagi, M.A. Bayoumi",
+    "venue": "IEEE Transactions on Signal Processing",
+    "month": "November 1992",
+    "link": "https://ieeexplore.ieee.org/abstract/document/165668/"
+  },
+  {
+    "year": 1992,
+    "title": "A Reconfiguration Technique for Reliable VLSI DSP Array Processors",
+    "authors": "Sanjay P Popli, Magdy A Bayoumi, Akash Tyagi",
+    "venue": "Journal of Circuits, Systems, and Computers",
+    "month": "September 1992",
+    "link": "https://www.worldscientific.com/doi/abs/10.1142/s0218126692000180"
+  },
+  {
+    "year": 1992,
+    "title": "Defect clustering viewed through generalized Poisson distribution",
+    "authors": "Aakash Tyagi, Magdy A Bayoumi",
+    "venue": "IEEE Transactions on Semiconductor manufacturing",
+    "month": "August 1992",
+    "link": "https://ieeexplore.ieee.org/abstract/document/149802/"
+  },
+  {
+    "year": 1991,
+    "title": "A generalized poisson based model for defect spatial distribution in WSI",
+    "authors": "A Tyagi, MA Bayoumi",
+    "venue": "1991 Proceedings, International Conference on Wafer Scale Integration",
+    "month": "January 1991",
+    "link": "https://ieeexplore.ieee.org/abstract/document/151709/"
+  },
+  {
+    "year": 1990,
+    "title": "Systolic array implementation of image segmentation by a directed split and merge procedure",
+    "authors": "Aakash Tyagi, Magdy Bayoumi",
+    "venue": "[1990] Proceedings. 10th International Conference on Pattern Recognition",
+    "month": "June 1990",
+    "link": "https://ieeexplore.ieee.org/abstract/document/119407/"
+  },
+  {
+    "year": 1990,
+    "title": "Yield modeling for fault tolerant WSI arrays",
+    "authors": "A Tyagi, MA Bayoumi",
+    "venue": "IEEE International Symposium on Circuits and Systems",
+    "month": "May 1990",
+    "link": "https://ieeexplore.ieee.org/abstract/document/112446/"
+  },
+  {
+    "year": 1989,
+    "title": "A systolic array for image segmentation using split and merge procedure",
+    "authors": "Aakash Tyagi, M Bayoumi",
+    "venue": "Proceedings of the 32nd Midwest Symposium on Circuits and Systems",
+    "month": "August 1989",
+    "link": "https://ieeexplore.ieee.org/abstract/document/101862"
   }
 ]
