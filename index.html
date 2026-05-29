@@ -81,10 +81,13 @@
     }
     .hero-photo-wrap {
       position: relative;
+      padding: 10px 0 10px 10px; /* room for the decorative border on all overflow sides */
     }
     .hero-photo-wrap::before {
       content: '';
-      position: absolute; inset: -8px -8px 8px 8px;
+      position: absolute;
+      top: 2px; left: 2px;
+      width: 220px; height: 280px;
       border: 2px solid var(--accent);
       border-radius: 2px;
       z-index: 0;
@@ -94,6 +97,7 @@
       object-fit: cover; object-position: top;
       border-radius: 2px;
       position: relative; z-index: 1;
+      margin-left: 8px; margin-top: 8px;
       box-shadow: 0 8px 32px rgba(80,0,0,0.12);
     }
     .hero-photo-placeholder {
@@ -591,12 +595,39 @@ function renderTeaching(data) {
   </ul>`;
 }
 
-// ── RENDER CONTACT (sidebar) ─────────────────────────────
-function renderContact(p) {
+// ── RENDER CONTACT (sidebar compact) ─────────────────────
+function renderContactCompact(p) {
   return `
     <div class="contact-row">${icon('email')} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
     <div class="contact-row">${icon('phone')} <span>${p.phone}</span></div>
     <div class="contact-row">${icon('office')} <span>${p.office}, ${p.university}</span></div>`;
+}
+
+// ── RENDER CONTACT (full section) ────────────────────────
+function renderContact(p) {
+  return `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+      <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--maroon);border-radius:2px;padding:1.6rem 1.8rem;">
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:1.1rem;">Get in Touch</h3>
+        <div class="contact-row">${icon('email')} <span><a href="mailto:${p.email}">${p.email}</a></span></div>
+        <div class="contact-row">${icon('phone')} <span>${p.phone}</span></div>
+        <div class="contact-row">${icon('office')} <span>${p.office}, ${p.university}</span></div>
+        <div style="margin-top:1.2rem;">
+          <a class="btn btn-primary" href="mailto:${p.email}" style="font-size:.78rem;">${icon('email')} Send Email</a>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:2px;padding:1.6rem 1.8rem;">
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:1.1rem;">Online Profiles</h3>
+        <ul class="sidebar-links">
+          <li style="margin-bottom:.7rem;"><a href="${p.google_scholar}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;Google Scholar</a></li>
+          <li style="margin-bottom:.7rem;"><a href="${p.lab_website}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;VERITAS Lab</a></li>
+          <li style="margin-bottom:.7rem;"><a href="${p.tamu_profile}" target="_blank" style="font-size:.88rem;">${icon('link')} &nbsp;TAMU Faculty Profile</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:1.2rem;font-size:.84rem;color:var(--ink-soft);">
+      Department of Computer Science &amp; Engineering, Texas A&amp;M University, 435 Nagle Street, College Station, TX 77843-3112
+    </p>`;
 }
 
 // ── SECTION RENDERER MAP ─────────────────────────────────
@@ -640,7 +671,7 @@ async function buildSection(sec, allData) {
     renderNav(sections, profile);
     renderHero(profile);
 
-    const visible = sections.filter(s => s.enabled && s.id !== 'contact');
+    const visible = sections.filter(s => s.enabled);
     let mainHtml = '';
     for (const sec of visible) {
       const body = await buildSection(sec, allData);
@@ -660,7 +691,7 @@ async function buildSection(sec, allData) {
     document.getElementById('sidebar-content').innerHTML = `
       <div class="sidebar-card">
         <h3>Contact</h3>
-        ${renderContact(profile)}
+        ${renderContactCompact(profile)}
       </div>
       <div class="sidebar-card">
         <h3>Quick Links</h3>

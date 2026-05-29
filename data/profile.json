@@ -1,7 +1,7 @@
 {
   "name": "Aakash Tyagi",
-  "title": "Professor of Practice",
-  "department": "Computer Science & Engineering",
+  "title": "Professor of Practice, Computer Science & Engineering",
+  "department": "Computer Science and Engineering",
   "affiliation": "Affiliated Faculty, Multidisciplinary Engineering",
   "university": "Texas A&M University",
   "photo": "assets/img/tyagi.jpg",
@@ -12,7 +12,7 @@
   "lab_website": "https://veritas.cse.tamu.edu/",
   "tamu_profile": "https://engineering.tamu.edu/cse/profiles/tyagi-aakash.html",
   "bio": [
-    "Dr. Aakash Tyagi is a Professor of Practice in the Department of Computer Science and Engineering at Texas A&M University, and an Affiliated Faculty in Multidisciplinary Engineering. He directs the VERITAS Lab, a state-of-the-art research facility advancing semiconductor chip testing, verification, and validation.",
+    "Dr. Aakash Tyagi is a Professor of Practice, Computer Science & Engineering in the Department of Computer Science and Engineering at Texas A&M University, and an Affiliated Faculty in Multidisciplinary Engineering. He directs the VERITAS Lab, a state-of-the-art research facility advancing semiconductor chip testing, verification, and validation.",
     "Dr. Tyagi brings over 20 years of distinguished industry experience in end-to-end CPU development spanning 8 generations of Intel processors. He joined Intel Corporation in 1994 and was instrumental in developing dynamic circuit methodologies on the Pentium class of processors. He served as Project Manager for the 3rd Generation Xeon Phi Processor, managing the design and execution of Knights Landing, the 2015 2nd Generation Xeon Phi product. His roles ranged from individual technical contributor to Senior Director in the Server Development Group.",
     "At Texas A&M University, his research interests focus on hardware performance, functional, and security verification, with a strong emphasis on applying artificial intelligence to achieve transformative gains in design quality and operational efficiency. He is a recipient of numerous university-level teaching excellence awards and is deeply committed to student engagement and educational innovation."
   ],
