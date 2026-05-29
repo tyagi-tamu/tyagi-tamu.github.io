@@ -1,0 +1,82 @@
+[
+  {
+    "year": 2025,
+    "title": "Improving Last-Mile Coverage in Functional Verification",
+    "authors": "C. Liu, P. Parlapalli, D.K. Houngninou, M. Quinn, A. Tyagi, J. Hu",
+    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "month": "September 2025",
+    "link": "https://dl.acm.org/doi/abs/10.1109/ICSE-SEIP58684.2023.00037"
+  },
+  {
+    "year": 2025,
+    "title": "BugGen: A Self-Correcting Multi-Agent LLM Pipeline for Realistic RTL Bug Synthesis",
+    "authors": "S. Jasper, M. Luu, E. Pan, A. Tyagi, M. Quinn, J. Hu, D.K. Houngninou",
+    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "month": "September 2025",
+    "link": "https://arxiv.org/abs/2506.10501"
+  },
+  {
+    "year": 2025,
+    "title": "VCDiag: Classifying Erroneous Waveforms for Failure Triage Acceleration",
+    "authors": "M. Luu, S. Jasper, K. Le, E. Pan, M. Quinn, A. Tyagi, J. Hu",
+    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "month": "September 2025",
+    "link": "https://arxiv.org/abs/2506.03590"
+  },
+  {
+    "year": 2024,
+    "title": "MinBLoG: Minimization of Boolean Logic Functions using Graph Attention Network",
+    "authors": "P. Sengupta, A. Tyagi, J. Hu, V.K. Rajan, H. Mostafa, S. Majumdar",
+    "venue": "ACM/IEEE International Symposium on Machine Learning for CAD",
+    "month": "September 2024",
+    "link": "https://dl.acm.org/doi/10.1145/3670474.3685962"
+  },
+  {
+    "year": 2023,
+    "title": "Quick Identification of Timing Critical Components in RTL Designs",
+    "authors": "P. Sengupta, A. Tyagi, Y. Chen, J. Hu",
+    "venue": "IEEE/ACM MLCAD Workshop",
+    "month": "September 2023",
+    "link": "https://ieeexplore.ieee.org/document/10299879"
+  },
+  {
+    "year": 2023,
+    "title": "HyPFuzz: Formal-Assisted Processor Fuzzing",
+    "authors": "C. Chen, R. Kande, F. Andersen, A. Tyagi, A. Sadeghi, J. Rajendran",
+    "venue": "32nd USENIX Security Symposium",
+    "month": "August 2023",
+    "link": "https://www.usenix.org/conference/usenixsecurity23/presentation/chen-chen"
+  },
+  {
+    "year": 2022,
+    "title": "How Good Is Your Verilog RTL Code? A Quick Answer from Machine Learning",
+    "authors": "P. Sengupta, A. Tyagi, Y. Chen, J. Hu",
+    "venue": "International Conference on Computer Aided Design",
+    "month": "November 2022",
+    "link": "https://dl.acm.org/doi/10.1145/3508352.3549375"
+  },
+  {
+    "year": 2022,
+    "title": "TheHuzz: Instruction Fuzzing of Processors using Golden Reference Models for finding Software-Exploitable Vulnerabilities",
+    "authors": "R. Kande, A. Crump, G. Persyn, P. Jauernig, A. Tyagi, A. Sadeghi, J.V. Rajendran",
+    "venue": "31st USENIX Security Symposium",
+    "month": "August 2022",
+    "link": "https://www.usenix.org/conference/usenixsecurity22/presentation/kande"
+  },
+  {
+    "year": 2022,
+    "title": "Transaction Level Stimulus Optimization in Functional Verification using Machine Learning Predictors",
+    "authors": "S. Gogri, A. Tyagi, M. Quinn, J. Hu",
+    "venue": "23rd International Symposium on Quality Electronic Design (ISQED)",
+    "month": "September 2022",
+    "link": "https://ieeexplore.ieee.org/document/9806210"
+  },
+  {
+    "year": 2020,
+    "title": "Machine Learning-Guided Stimulus Generation for Functional Verification",
+    "authors": "S. Gogri, J. Ju, A. Tyagi, et al.",
+    "venue": "DVCON, San Jose, CA",
+    "month": "March 2020",
+    "link": "https://dvcon-proceedings.org/wp-content/uploads/machine-learning-guided-stimulus-generation-for-functional-verification.pdf"
+  }
+]

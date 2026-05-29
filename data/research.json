@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Hardware Verification",
+    "description": "Advancing methodologies for verifying digital circuits, including formal approaches for automated testbench component generation and simulation-based techniques for complex hardware systems.",
+    "icon": "chip"
+  },
+  {
+    "title": "Hardware Design",
+    "description": "Investigating the use of artificial intelligence to enhance the quality and efficiency of physical design and electronic design automation (EDA) methodologies.",
+    "icon": "cpu"
+  },
+  {
+    "title": "Machine Learning in Hardware Verification",
+    "description": "Exploring the intersection of AI and hardware verification by developing machine learning-based techniques to strengthen both pre-silicon and post-silicon verification practices.",
+    "icon": "brain"
+  },
+  {
+    "title": "Software Testing",
+    "description": "Conducting research in automated test generation, mutation testing, and program analysis to improve software quality and reliability across diverse application domains.",
+    "icon": "code"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "current": [
+    {
+      "name": "Fenghua Wu",
+      "degree": "PhD",
+      "photo": ""
+    },
+    {
+      "name": "Chengjia Liu (Daniel)",
+      "degree": "PhD",
+      "photo": ""
+    },
+    {
+      "name": "Ana Eugenia Sanchez",
+      "degree": "PhD",
+      "photo": ""
+    },
+    {
+      "name": "Sairam Viswanathan Susarla",
+      "degree": "PhD",
+      "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/sairam.jpg"
+    },
+    {
+      "name": "Evan Pan",
+      "degree": "PhD",
+      "photo": ""
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Minh Luu",
+      "degree": "MS 2024",
+      "current_position": "Infineon Technologies",
+      "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/minhlu.png"
+    },
+    {
+      "name": "Surya Jasper",
+      "degree": "BS 2025",
+      "current_position": "AMD, Inc.",
+      "photo": ""
+    }
+  ]
+}
