@@ -3,17 +3,17 @@
     {
       "name": "Fenghua Wu",
       "degree": "PhD",
-      "photo": "assets/img/fenghua.jpg"
+      "photo": ""
     },
     {
       "name": "Chengjia Liu (Daniel)",
       "degree": "PhD",
-      "photo": ""
+      "photo": "assets/img/chengjia.jpg"
     },
     {
       "name": "Ana Eugenia Sanchez",
       "degree": "PhD",
-      "photo": ""
+      "photo": "assets/img/ana.jpg"
     },
     {
       "name": "Sairam Viswanathan Susarla",
@@ -37,7 +37,7 @@
       "name": "Surya Jasper",
       "degree": "BS 2025",
       "current_position": "AMD, Inc.",
-      "photo": ""
+      "photo": "assets/img/surya.jpg"
     }
   ],
   "collaborators": [
