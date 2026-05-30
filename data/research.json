@@ -21,12 +21,12 @@
   },
   {
     "title": "Agentic AI Systems & Energy Efficiency",
-    "description": "Developing frameworks to measure and optimize energy consumption in agentic AI workflows. Introduces Energy per Successful Goal (EpG) as a new accounting unit, replacing per-inference metrics for multi-step LLM orchestration systems.",
+    "description": "Developing energy accounting frameworks for multi-step LLM pipelines and autonomous AI agents. Introduces Energy per Successful Goal (EpG) — a goal-level metric that replaces per-inference counting and exposes the true energy cost of agentic workflows involving retries, tool calls, and orchestration overhead.",
     "icon": "brain"
   },
   {
     "title": "AI Hardware Observability",
-    "description": "Investigating energy attribution gaps in edge AI hardware platforms. Establishing hardware requirements and calibration methods for process-level energy measurement in AI systems deployed on modern SoC-based devices.",
+    "description": "Exposing energy measurement blind spots in edge AI hardware — including NVIDIA's flagship platforms — where SoC integration prevents process-level energy attribution. Establishing hardware observability requirements and calibration standards needed for accurate energy profiling of AI inference workloads.",
     "icon": "chip"
   }
 ]

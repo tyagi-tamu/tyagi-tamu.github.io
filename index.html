@@ -675,9 +675,118 @@
           grid-template-columns: 1fr;
         }
       }
-      @media (max-width: 600px) {
+      /* ── HAMBURGER BUTTON ───────────────────────────────── */
+      .nav-hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 200;
+      }
+      .nav-hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--maroon);
+        border-radius: 2px;
+        transition: all 0.25s ease;
+        transform-origin: center;
+      }
+      .nav-hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .nav-hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .nav-hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* ── MOBILE NAV DRAWER ──────────────────────────────── */
+      @media (max-width: 640px) {
+        nav {
+          padding: 0 1.2rem;
+        }
+        .nav-inner {
+          height: 52px;
+          position: relative;
+        }
+        .nav-brand {
+          font-size: 1rem;
+        }
+        .nav-hamburger {
+          display: flex;
+        }
         .nav-links {
           display: none;
+          position: fixed;
+          top: 52px;
+          left: 0;
+          right: 0;
+          background: rgba(253, 250, 247, 0.98);
+          backdrop-filter: blur(12px);
+          border-bottom: 2px solid var(--maroon);
+          flex-direction: column;
+          padding: 0.5rem 0 1rem;
+          z-index: 150;
+          box-shadow: 0 8px 24px rgba(80,0,0,0.12);
+        }
+        .nav-links.open {
+          display: flex;
+        }
+        .nav-links li {
+          width: 100%;
+        }
+        .nav-links a {
+          display: block;
+          width: 100%;
+          padding: 0.85rem 1.5rem;
+          font-size: 0.8rem;
+          letter-spacing: 0.1em;
+          border-bottom: 1px solid var(--rule);
+        }
+        .nav-links li:last-child a {
+          border-bottom: none;
+        }
+        .nav-links a.active {
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          border-bottom-color: var(--rule);
+          background: var(--maroon-pale);
+          color: var(--maroon);
+          padding-bottom: 0.85rem;
+        }
+        .nav-links li:last-child a.active {
+          border-bottom: none;
+        }
+
+        /* Hero mobile */
+        .hero {
+          padding: 2.5rem 1.2rem 2.5rem;
+        }
+        .hero-inner {
+          gap: 1.5rem;
+        }
+        .hero-meta {
+          gap: 0.6rem 1rem;
+        }
+        .hero-links {
+          gap: 0.5rem;
+        }
+
+        /* Contact section mobile */
+        .contact-grid-mobile {
+          grid-template-columns: 1fr !important;
+        }
+
+        /* Main wrap padding */
+        .main-wrap {
+          padding: 2rem 1.2rem 4rem;
         }
       }
     </style>
@@ -727,10 +836,30 @@
         document.getElementById("top-nav").innerHTML = `
     <div class="nav-inner">
       <span class="nav-brand">${profile.name}</span>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         ${visible.map((s) => `<li><a href="#${s.id}">${s.title}</a></li>`).join("")}
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>`;
+
+        // Hamburger toggle logic
+        const btn = document.getElementById("nav-hamburger");
+        const menu = document.getElementById("nav-links-list");
+        btn.addEventListener("click", () => {
+          const isOpen = menu.classList.toggle("open");
+          btn.classList.toggle("open", isOpen);
+          btn.setAttribute("aria-expanded", isOpen);
+        });
+        // Close menu when a nav link is tapped
+        menu.addEventListener("click", (e) => {
+          if (e.target.tagName === "A") {
+            menu.classList.remove("open");
+            btn.classList.remove("open");
+            btn.setAttribute("aria-expanded", false);
+          }
+        });
       }
 
       // ── RENDER HERO ──────────────────────────────────────────
@@ -922,17 +1051,27 @@
       // ── RENDER CONTACT (full section) ────────────────────────
       function renderContact(p) {
         return `
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;align-items:start;">
       <div>
-        <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.8;margin-bottom:0.5rem;">
-          Welcome! Dr. Tyagi is open to inquiries from prospective PhD students, independent
-          researchers, industry partners, and organizations interested in collaborating on
-          hardware verification, AI-driven EDA, and related research areas.
+        <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1.2rem;">
+          Dr. Tyagi welcomes inquiries from prospective PhD students, independent researchers,
+          and industry partners. His lab works at the intersection of hardware verification,
+          AI-driven EDA, and agentic AI systems — including energy efficiency frameworks
+          for multi-step LLM pipelines and observability in edge AI hardware.
         </p>
-        <p style="font-size:.95rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1.5rem;">
-          Please use the form to introduce yourself and describe the nature of your inquiry.
-          Dr. Tyagi reviews all submissions and responds to relevant inquiries at the earliest
-          opportunity. For urgent matters, reach out directly by email.
+        <div style="background:var(--maroon-pale);border-left:3px solid var(--maroon);border-radius:2px;padding:1.2rem 1.5rem;margin-bottom:1.4rem;">
+          <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon);margin-bottom:.75rem;">Collaboration Opportunities</p>
+          <ul style="list-style:none;font-size:.88rem;color:var(--ink-mid);line-height:1.8;">
+            <li style="margin-bottom:.4rem;">&#8594;&nbsp; EDA vendors and semiconductor companies working on AI-assisted design and verification automation</li>
+            <li style="margin-bottom:.4rem;">&#8594;&nbsp; AI/ML platform teams addressing energy efficiency and observability in agentic or edge inference systems</li>
+            <li style="margin-bottom:.4rem;">&#8594;&nbsp; Industry labs exploring LLM-driven RTL verification, assertion generation, or bug synthesis</li>
+            <li>&#8594;&nbsp; Academic groups and independent researchers in hardware security, functional verification, or AI for EDA</li>
+          </ul>
+        </div>
+        <p style="font-size:.84rem;color:var(--ink-mid);line-height:1.7;margin-bottom:1.4rem;">
+          Please use the form to introduce yourself and describe your inquiry.
+          Dr. Tyagi reviews all submissions and responds to relevant inquiries promptly.
+          For urgent matters, reach out directly by email.
         </p>
         <div style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--maroon);border-radius:2px;padding:1.4rem 1.6rem;margin-bottom:1.2rem;">
           <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:1rem;">Direct Contact</h3>
