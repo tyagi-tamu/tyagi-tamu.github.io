@@ -12,26 +12,26 @@
     },
     {
       "name": "Ana Eugenia Sanchez",
-      "degree": "PhD",
+      "degree": "MS",
       "photo": "assets/img/ana.jpg"
     },
     {
       "name": "Sairam Viswanathan Susarla",
-      "degree": "PhD",
+      "degree": "MS",
       "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/sairam.jpg"
     },
     {
-      "name": "Evan Pan",
+      "name": "Minh Luu",
       "degree": "PhD",
-      "photo": ""
+      "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/minhlu.png"
     }
   ],
   "alumni": [
-    {
-      "name": "Minh Luu",
-      "degree": "MS 2024",
-      "current_position": "Infineon Technologies",
-      "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/minhlu.png"
+     {
+      "name": "Evan Pan",
+      "degree": "BS 2026",
+      "current_position": "University of Illinois at Urbana Champaign, PhD",
+      "photo": ""
     },
     {
       "name": "Surya Jasper",
