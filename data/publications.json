@@ -1,6 +1,13 @@
 [
   {
     "year": 2026,
+    "title": "Spec2Assertion: Automatic Pre-RTL Assertion Generation by LLMs with Progressive Regularization",
+    "authors": "Fenghua Wu, Runzhi Wang, Evan Pan, Aakash Tyagi, Michael Quinn, David Kebo, Jeyavijayan Rajendran, Jiang Hu",
+    "venue": "2026 ACM/IEEE 8th Symposium on Machine Learning for CAD (MLCAD)",
+    "month": "Sep 2026",
+  },
+  {
+    "year": 2026,
     "title": "The Energy Blind Spot: NVIDIA's Flagship Edge AI Hardware Cannot Support Process-Level Energy Attribution",
     "authors": "Deepak Panigrahy, Aakash Tyagi",
     "venue": "arXiv preprint",
@@ -14,14 +21,6 @@
     "venue": "arXiv preprint",
     "month": "May 2026",
     "link": "https://arxiv.org/abs/2605.22883"
-  },
-  {
-    "year": 2025,
-    "title": "Combining compression, partitioning and quantization of DL models for fitment in hardware processors",
-    "authors": "Swarnava Dey, Arpan Pal, Gitesh Kulkarni, Chirabrata Bhaumik, Arijit Ukil, Jayeeta MONDAL, Ishan SAHU, Aakash TYAGI, Amit SWAIN, Arijit Mukherjee",
-    "venue": "US Patent 12,430,558",
-    "month": "September 2025",
-    "link": "https://patents.google.com/patent/US12430558B2/en"
   },
   {
     "year": 2025,
