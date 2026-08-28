@@ -3,40 +3,52 @@
     {
       "name": "Fenghua Wu",
       "degree": "PhD",
-      "photo": ""
+      "current_position": "",
+      "role": "",
+      "photo": "assets/img/default_profile.png"
     },
     {
       "name": "Chengjia Liu (Daniel)",
       "degree": "PhD",
+      "current_position": "",
+      "role": "",
       "photo": "assets/img/chengjia.jpg"
     },
     {
       "name": "Ana Eugenia Sanchez",
       "degree": "MS",
+      "current_position": "",
+      "role": "",
       "photo": "assets/img/ana.jpg"
     },
     {
       "name": "Sairam Viswanathan Susarla",
       "degree": "MS",
-      "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/sairam.jpg"
+      "current_position": "",
+      "role": "",
+      "photo": "assets/img/sairam.jpg"
     },
     {
       "name": "Minh Luu",
       "degree": "PhD",
-      "photo": "https://veritas.cse.tamu.edu/wp-content/uploads/2025/10/minhlu.png"
+      "current_position": "",
+      "role": "",
+      "photo": "assets/img/minhlu.png"
     }
   ],
   "alumni": [
-     {
+    {
       "name": "Evan Pan",
       "degree": "BS 2026",
       "current_position": "UIUC",
-      "photo": ""
+      "role": "",
+      "photo": "assets/img/default_profile.png"
     },
     {
       "name": "Surya Jasper",
       "degree": "BS 2025",
       "current_position": "AMD, Inc.",
+      "role": "",
       "photo": "assets/img/surya.jpg"
     }
   ],
@@ -44,7 +56,8 @@
     {
       "name": "Deepak Panigrahy",
       "role": "Independent Researcher",
-      "photo": ""
+      "current_position": "",
+      "photo": "assets/img/default_profile.png"
     }
   ]
 }
