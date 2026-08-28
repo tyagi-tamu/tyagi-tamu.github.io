@@ -1,9 +1,26 @@
 [
   {
-    "date": "2025",
-    "title": "Veritas wins the prestigious NSTC/Natcast Workforce Development Grant of $1.28M",
-    "description": "Veritas signed a $1.28M contract with Natcast under the auspices of the US Department of Commerce. The funding supports WAVE-CHIP (Workforce Advancement in Verification and Evaluation of Chips), a program designed to tackle the critical shortage of skilled verification engineers in the semiconductor industry by expanding education and workforce development opportunities.",
-    "link": "https://veritas.cse.tamu.edu/veritas-wins-the-prestigious-nstc-natcast-workforce-development-grant-of-1-28m-usd-to-bring-hardware-verification-to-academic-institutions-and-industry/"
+    "date": "July 2026",
+    "title": "Veritas publishes 1 paper in prestigious MLCAD Conference",
+    "description": "Congratulations to Fenghua Wu for publishing his research at the 8th ACM/IEEE International Symposium on Machine Learning for CAD.",
+    "link": "https://mlcad.org/symposium/2026/program/"
+  },
+  {
+    "date": "May 2026",
+    "title": "SEMI Foundation and the U.S. National Science Foundation Launch First Four Regional Nodes of the National Network for Microelectronics Education (NNME)",  ",
+    "description": "Veritas is one of the participating groups in being recognized with $135K award to participate in a National Workforce Infrastructure Initiative Across the United States to Accelerate America’s Microelectronics Talent Pipeline",
+    "link": "https://news.utexas.edu/2026/06/09/ut-austin-selected-to-help-lead-national-expansion-of-semiconductor-workforce/"
+  },
+  {
+    "date": "April 2026",
+    "title": "Veritas participates in winning proposal for establishing a new NSF REU Site at Texas A&M",
+    "description": "Veritas members Aakash Tyagi and Jiang Hu participate with colleagues in ECE to create a winning proposal for a new NSF REU Site on on AI-based chip design and verification",
+  },
+  {
+    "date": "September 2025",
+    "title": "Veritas publishes 3 papers in prestigious MLCAD Conference",
+    "description": "Congratulations to recent graduates Minh Luu and Surya Jasper, and continuing PhD student Chengjia Liu for publishing their research at the 7th ACM/IEEE International Symposium on Machine Learning for CAD.",
+    "link": "https://veritas.cse.tamu.edu/veritas-publishes-3-papers-in-prestigious-mlcad-conference/"
   },
   {
     "date": "August 2025",
@@ -12,9 +29,10 @@
     "link": "https://veritas.cse.tamu.edu/veritas-offers-train-the-trainer-workshop-to-faculty-from-r1-r2-institutions-to-teach-hardware-verification-to-their-students/"
   },
   {
-    "date": "September 2025",
-    "title": "Veritas publishes 3 papers in prestigious MLCAD Conference",
-    "description": "Congratulations to recent graduates Minh Luu and Surya Jasper, and continuing PhD student Chengjia Liu for publishing their research at the 7th ACM/IEEE International Symposium on Machine Learning for CAD.",
-    "link": "https://veritas.cse.tamu.edu/veritas-publishes-3-papers-in-prestigious-mlcad-conference/"
+    "date": "March 2025",
+    "title": "Veritas wins the prestigious NSTC/Natcast Workforce Development Grant of $1.28M",
+    "description": "Veritas signed a $1.28M contract with Natcast under the auspices of the US Department of Commerce. The funding supports WAVE-CHIP (Workforce Advancement in Verification and Evaluation of Chips), a program designed to tackle the critical shortage of skilled verification engineers in the semiconductor industry by expanding education and workforce development opportunities.",
+    "link": "https://veritas.cse.tamu.edu/veritas-wins-the-prestigious-nstc-natcast-workforce-development-grant-of-1-28m-usd-to-bring-hardware-verification-to-academic-institutions-and-industry/"
   }
+  
 ]
