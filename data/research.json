@@ -1,12 +1,12 @@
 [
   {
-    "title": "Hardware Verification",
-    "description": "Advancing methodologies for verifying digital circuits, including formal approaches for automated testbench component generation and simulation-based techniques for complex hardware systems.",
+    "title": "Hardware Functional Verification",
+    "description": "Advancing methodologies for verifying digital circuits, including AI-based approaches for testbench component generation and simulation-based verification for complex hardware systems.",
     "icon": "chip"
   },
   {
     "title": "Hardware Design",
-    "description": "Investigating the use of artificial intelligence to enhance the quality and efficiency of physical design and electronic design automation (EDA) methodologies.",
+    "description": "Investigating the use of AI to enhance the quality and efficiency of physical design and electronic design automation (EDA) methodologies.",
     "icon": "cpu"
   },
   {
